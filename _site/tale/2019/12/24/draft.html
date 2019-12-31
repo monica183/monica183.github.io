@@ -38,6 +38,9 @@
              width: 60%;
              background-color: #74787a;
         }
+        #content{
+            padding-left: 0px;
+        }
         #title{
             width: 100%;
             height: 50px;
@@ -63,14 +66,14 @@
             <div class="navbar-expand-md navbar-dark"> 
             
                 <header class="d-none d-md-block">
-                    <h3 id="w2" style="text-align: center;color: rgb(170,27,41);">m&nbsp;o&nbsp;n&nbsp;i&nbsp;c&nbsp;a&nbsp;b&nbsp;l&nbsp;o&nbsp;g</h3>
+                    <h3 id="w2" style="text-align: center;letter-spacing: 3px;color:rgb(170,27,41);">monicablog</h3>
                     <div id="head" >
-                        <img src="/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg"  >
-                        
+                        <img src="/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg"  name="smileimage" onMouseOver="window.document.smileimage.src='/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg';" onMouseOut="window.document.smileimage.src='/public/img/timg.jfif';">
                     </div>
+                    
                     <div id="head2" style="color: #fff;text-align: center;">
-                            <div style="padding-top:40%">一枚大三宅女</div>
-                            <span>人生理想：成为一个有钱人</span>
+                            <div style="padding-top:40%">大三在读</div>
+                            <span>软件工程</span>
                     </div>
                 </header>
                 
@@ -82,7 +85,6 @@
                     <a class="navbar-brand d-md-none d-lg-none d-xl-none" href="#">
                         <div id="head1" >
                             <img src="/public/img/timg.jfif">
-
                         </div>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SidebarContent" aria-controls="SidebarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,13 +115,25 @@
                                     <a class="nav-link dropdown-toggle" href="#MenuDropdown" data-toggle="collapse" aria-controls="MenuDropdown" aria-expanded="false"><span class="glyphicon glyphicon-tags
                                             glyphicon glyphicon-"></span> 分类</a>
                                             <ul id="MenuDropdown" class="sub-navbar collapse flex-column">
-                                                {% for category in site.categories %}
-                                                    <span style="font-size: 20px;color: #000">{{ category | first }}</span>
-                                                    {% for post in category.last %}
-                                                        <li><a href="{{ post.url }}">{{
-                                                        post.title }}</a></li>
-                                                    {% endfor %}
-                                                {% endfor %}
+                                                
+                                                <span style="font-size: 20px;color: #000">tale</span>
+                                                
+                                                <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/24/draft.html">木兰诗</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/22/light.html">阿拉丁神灯</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/21/dark.html">丑小鸭</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/15/456.html">美女与野兽</a></li>
+                                                
+                                                
+                                                <span style="font-size: 20px;color: #000">comic</span>
+                                                
+                                                <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
+                                                
+                                                
                                             </ul>
                                     
                                 </li>
@@ -131,7 +145,7 @@
                     </nav>
                 
                 
-                    <!-- <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span> -->
+                
                     <!-- Sidebar search form -->
                     <form class="form-inline sidebar-search-form my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="text" size="10"  placeholder="Search" aria-label="Search">
@@ -146,17 +160,15 @@
                     </p>
                     
                     <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span>
-                    <div style="display: none;width: 140px;height: 30px;background-color: #ccc;margin-left: 100px;border-radius: 10px;margin-bottom: 10px;color: #000;float: right;margin-top: 10px;text-align:center;" id="box1"><span>欢迎来到我的博客哟!</span></div>
-                    <img id="gif" src="/public/img/20180519223848_khhcx.png">
+                    <img id="gif" src="/public/img/timg7854.gif">
                 </div>
             </div> 
         </div>
-        
         <div id="header1">
             <!-- <img src="/public/img/01968d5d2843aba801214837dcf9c280w_1l_2o_100sh.jpg"> -->
         </div>
         
-        <div id="content">
+        <div id="content" style="padding-left: 250px;">
             <div id="content-wrapper" >
                 <!-- Main content area -->
                 <main class="container-fluid">
@@ -165,10 +177,36 @@
                         <!-- Main content -->
                         <div class="col" style="line-height: 30px;letter-spacing: 2px;margin-top: 100px;">
                                 <div id="title">
-                                    <h1 style="color: #fff" class="animated boomerang">{{page.title}}</h1>
+                                    <h1 style="color: #fff" class="animated boomerang">木兰诗</h1>
                                 </div> 
-                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> {{ page.date | date:"%d日%m月%Y年"}}</div>
-                                {{content}}                     
+                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> 24日12月2019年</div>
+                                <p>唧唧复唧唧，木兰当户织。不闻机杼声，惟闻女叹息。</p>
+
+<p>问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。</p>
+
+<p>东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。</p>
+
+<p>万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。
+<!--more-->
+归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。</p>
+
+<p>爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。</p>
+
+<p>雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？
+唧唧复唧唧，木兰当户织。不闻机杼声，惟闻女叹息。</p>
+
+<p>问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。</p>
+
+<p>东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。</p>
+
+<p>万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。</p>
+
+<p>归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。</p>
+
+<p>爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。</p>
+
+<p>雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？</p>
+                     
                         </div>        
                     </div> 
                 </main>
@@ -183,10 +221,10 @@
                         <input type="button" id="btn8" value="发送" placeholder="">
                     </div>
 
-                    <a href="{{ page.next.url }}" id="back" style="color: #fff">
+                    <a href="/tale/comic/2019/12/25/123.html" id="back" style="color: #fff">
                         <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Previous
                     </a>
-                    <a href="{{ page.previous.url }}" id="back" style="float: right;color: #fff">
+                    <a href="/tale/2019/12/22/light.html" id="back" style="float: right;color: #fff">
                         Next&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 <!-- Footer -->

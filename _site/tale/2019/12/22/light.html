@@ -38,6 +38,9 @@
              width: 60%;
              background-color: #74787a;
         }
+        #content{
+            padding-left: 0px;
+        }
         #title{
             width: 100%;
             height: 50px;
@@ -63,14 +66,14 @@
             <div class="navbar-expand-md navbar-dark"> 
             
                 <header class="d-none d-md-block">
-                    <h3 id="w2" style="text-align: center;color: rgb(170,27,41);">m&nbsp;o&nbsp;n&nbsp;i&nbsp;c&nbsp;a&nbsp;b&nbsp;l&nbsp;o&nbsp;g</h3>
+                    <h3 id="w2" style="text-align: center;letter-spacing: 3px;color:rgb(170,27,41);">monicablog</h3>
                     <div id="head" >
-                        <img src="/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg"  >
-                        
+                        <img src="/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg"  name="smileimage" onMouseOver="window.document.smileimage.src='/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg';" onMouseOut="window.document.smileimage.src='/public/img/timg.jfif';">
                     </div>
+                    
                     <div id="head2" style="color: #fff;text-align: center;">
-                            <div style="padding-top:40%">一枚大三宅女</div>
-                            <span>人生理想：成为一个有钱人</span>
+                            <div style="padding-top:40%">大三在读</div>
+                            <span>软件工程</span>
                     </div>
                 </header>
                 
@@ -82,7 +85,6 @@
                     <a class="navbar-brand d-md-none d-lg-none d-xl-none" href="#">
                         <div id="head1" >
                             <img src="/public/img/timg.jfif">
-
                         </div>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SidebarContent" aria-controls="SidebarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,13 +115,25 @@
                                     <a class="nav-link dropdown-toggle" href="#MenuDropdown" data-toggle="collapse" aria-controls="MenuDropdown" aria-expanded="false"><span class="glyphicon glyphicon-tags
                                             glyphicon glyphicon-"></span> 分类</a>
                                             <ul id="MenuDropdown" class="sub-navbar collapse flex-column">
-                                                {% for category in site.categories %}
-                                                    <span style="font-size: 20px;color: #000">{{ category | first }}</span>
-                                                    {% for post in category.last %}
-                                                        <li><a href="{{ post.url }}">{{
-                                                        post.title }}</a></li>
-                                                    {% endfor %}
-                                                {% endfor %}
+                                                
+                                                <span style="font-size: 20px;color: #000">tale</span>
+                                                
+                                                <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/24/draft.html">木兰诗</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/22/light.html">阿拉丁神灯</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/21/dark.html">丑小鸭</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/15/456.html">美女与野兽</a></li>
+                                                
+                                                
+                                                <span style="font-size: 20px;color: #000">comic</span>
+                                                
+                                                <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
+                                                
+                                                
                                             </ul>
                                     
                                 </li>
@@ -131,7 +145,7 @@
                     </nav>
                 
                 
-                    <!-- <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span> -->
+                
                     <!-- Sidebar search form -->
                     <form class="form-inline sidebar-search-form my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="text" size="10"  placeholder="Search" aria-label="Search">
@@ -146,17 +160,15 @@
                     </p>
                     
                     <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span>
-                    <div style="display: none;width: 140px;height: 30px;background-color: #ccc;margin-left: 100px;border-radius: 10px;margin-bottom: 10px;color: #000;float: right;margin-top: 10px;text-align:center;" id="box1"><span>欢迎来到我的博客哟!</span></div>
-                    <img id="gif" src="/public/img/20180519223848_khhcx.png">
+                    <img id="gif" src="/public/img/timg7854.gif">
                 </div>
             </div> 
         </div>
-        
         <div id="header1">
             <!-- <img src="/public/img/01968d5d2843aba801214837dcf9c280w_1l_2o_100sh.jpg"> -->
         </div>
         
-        <div id="content">
+        <div id="content" style="padding-left: 250px;">
             <div id="content-wrapper" >
                 <!-- Main content area -->
                 <main class="container-fluid">
@@ -165,10 +177,24 @@
                         <!-- Main content -->
                         <div class="col" style="line-height: 30px;letter-spacing: 2px;margin-top: 100px;">
                                 <div id="title">
-                                    <h1 style="color: #fff" class="animated boomerang">{{page.title}}</h1>
+                                    <h1 style="color: #fff" class="animated boomerang">阿拉丁神灯</h1>
                                 </div> 
-                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> {{ page.date | date:"%d日%m月%Y年"}}</div>
-                                {{content}}                     
+                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> 22日12月2019年</div>
+                                <p>故事叙述一名来自“极东之地”唐帝国的年轻贫穷混混，名叫阿拉丁受一名来自“极西之地”马格里布的魔法师之邀（他冒充为阿拉丁的叔叔），前往一个设有陷阱的洞穴中拿取一只神奇的油灯。魔法师正要进一步利用阿拉丁的时候，阿拉丁发现他被困在洞穴里。幸运的是，阿拉丁还留着魔法师借给他的一只魔戒。阿拉丁绝望地摩擦双手，正巧擦到了戒指，迸发出一个精灵。这个精灵还带他返家，而阿拉丁则带回了油灯。正当他母亲要清理油灯的时候，突然间油灯迸发出一个威力更强大的精灵，随时等待主人的使唤。在精灵的帮助下，阿拉丁变得有钱有势，还娶了公主巴德罗巴朵尔。精灵更为阿拉丁建造一座美轮美奂的宫殿，甚至比皇帝的皇宫还要壮丽。<!--more-->
+后来魔法师回到了阿拉丁所居住的城市，并且以诈术骗走了巴德罗巴朵尔的神灯。当时她没留意到那盏特别的油灯，交给了那个魔术师，以“旧灯换新灯”。魔术师命令精灵把阿拉丁的宫殿搬到马格里布。还好阿拉丁还保有那只魔戒指，因此还有威力较小的精灵可供使唤。虽然戒指精灵无法直接破解神灯精灵的法力，但他还是能够将阿拉丁带往马格里布，帮助他救回妻子并击败了魔法师。
+阿拉丁和一群孩子正在街角嘻戏玩耍。离他不远的一个神秘人已经窥视他好几天了。这人是个魔法师，他来这里是为了找一个能帮他得到梦寐以求的宝贝的人——阿拉丁。魔法师走到阿拉丁身边，问道：“孩子，你的父亲是裁缝穆司塔法吗”
+是的‘“阿拉丁望着有些奇怪的陌生人说“可他已经去世很多年了”
+“我可怜的弟弟哟”
+魔法师听到这话，竟捶胸顿足的哭起来。他告诉阿拉丁：“我是你父亲的哥哥，当年我远走他乡时，他还没有成婚……”阿拉丁见他说得声情并茂，便相信了他，领他回了家。
+魔法师进屋后，就趴在阿拉丁父亲生前坐过的椅子上狂吻。他的这些举动让母子俩很感动，也相信了他是阿拉丁的伯父。魔法师临走前留下了好些金币，还说第二天会带阿拉丁去做大生意。
+第二天一大早，魔法师便领着阿拉丁来到丛林中的一块空地。他站在那儿，口中念念有词，不一会，就听见周围一声巨响，大地竟然裂开了，地上露出来一个长方形的云石板。
+魔法师告诉阿拉丁：“抓住上面的铜环，口中念着自己的名字打开它，下入地道，穿过十二级台阶。穿过一座长满珍珠宝石的花园，千万不要去留恋那些珍宝。你径直走如大厅，会看见大厅天花板中央挂着一盏旧油灯。你顺着旁边的挂梯爬上去，把油灯摘下来，再带回来给我就行了。回来时，你尽可以在花园里拿走你喜欢的宝贝，有了这些，你就能成为人人敬仰的富翁啦。”
+阿拉丁被推入地道，不知如何是好，只得按伯父说的话去做：回来时，有到花园了拿了些珠宝，燃火向地道口走去。阿拉丁来到地道口，因为最上面的一级台阶离地面跨度太大，迈不上去，便请求伯父拉他一把。魔法师让阿拉丁先交出油灯，才同意帮他。可油灯压在衣袋的最下面，不容易掏出来。阿拉丁便说上去后在交给他。
+魔法师见拿不到油灯，以为阿拉丁发现了油灯的秘密，便索性把心一横，念动咒语，把地面合上了。阿拉丁这才醒悟到这个家伙只是想利用他得到这盏油灯。阿拉丁解开衣袋把油灯从里面掏出来，看了又看，“没什么特别的嘛，只是脏了些。”便用手擦了擦油灯，可就在这么一擦，奇迹出现了，一个巨神站在阿拉丁的面前，恭敬的说：“主人，我是灯神，请问你有什么吩咐”
+“我……我要回到地面上去。”
+阿拉丁惊得张大了嘴，结结巴巴地说。阿拉丁的语音刚落，地面轰然裂开，他一下子就回到了地面，灯神也随之隐去了，阿拉丁顺利回家去了
+经过这件事，阿拉丁不再贪玩。细心地钻研起经商之道来。虽然他拥有了神灯，但从不轻易使用它，只是靠点小生意来维持生计。</p>
+                     
                         </div>        
                     </div> 
                 </main>
@@ -183,10 +209,10 @@
                         <input type="button" id="btn8" value="发送" placeholder="">
                     </div>
 
-                    <a href="{{ page.next.url }}" id="back" style="color: #fff">
+                    <a href="/tale/2019/12/24/draft.html" id="back" style="color: #fff">
                         <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Previous
                     </a>
-                    <a href="{{ page.previous.url }}" id="back" style="float: right;color: #fff">
+                    <a href="/tale/2019/12/21/dark.html" id="back" style="float: right;color: #fff">
                         Next&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 <!-- Footer -->
