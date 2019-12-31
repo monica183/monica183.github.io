@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+        <!-- Main CSS --> 
+        <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="/public/css/mimic.min.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/mimic.css">
+        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/index.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/load.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/comment.css">
+        <!-- Font Awesome -->
+       
+    </head>
+    <style>
+    body{
+        /*background-image: url(/public/img/01ffde5d68d9fca80120526dc5813c.j_1l_2o_100sh.jpg);*/
+        /*position: fixed;*/
+    }
+    #header1 img{
+        width: 100%;
+        height: 400px;
+    }
+        .MenuDropdown span{
+             font-size: 16px;
+             color: #000;
+             font-weight: bold;
+        }
+        .col{
+             padding: 50px;
+             margin-top: 70px;
+             width: 60%;
+             background-color: #74787a;
+        }
+        #content{
+            padding-left: 0px;
+        }
+        #title{
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #date{
+            /*display: block;;*/
+            width: 100%;
+            height: 20px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        body{
+               background:url(/public/img/01be365e06c929a80120a8957117_100sh.jpg);
+            }
+    </style>
+    <body style="color: #fff">
+         <!-- Main navigation -->
+        <div id="sidebar">
+                      
+            <div class="navbar-expand-md navbar-dark"> 
+            
+                <header class="d-none d-md-block">
+                    <h3 id="w2" style="text-align: center;letter-spacing: 3px;color:rgb(170,27,41);">monicablog</h3>
+                    <div id="head" >
+                        <img src="/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg"  name="smileimage" onMouseOver="window.document.smileimage.src='/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg';" onMouseOut="window.document.smileimage.src='/public/img/timg.jfif';">
+                    </div>
+                    
+                    <div id="head2" style="color: #fff;text-align: center;">
+                            <div style="padding-top:40%">大三在读</div>
+                            <span>软件工程</span>
+                    </div>
+                </header>
+                
+                
+                <!-- Mobile menu toggle and header -->
+                <div class="mobile-header-controls">
+                    
+                    
+                    <a class="navbar-brand d-md-none d-lg-none d-xl-none" href="#">
+                        <div id="head1" >
+                            <img src="/public/img/timg.jfif">
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SidebarContent" aria-controls="SidebarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+         
+                <div id="SidebarContent" class="collapse flex-column navbar-collapse">
+ 
+                        
+                    
+                    <!-- Main navigation items -->
+                    <nav class="navbar navbar-dark">
+                        <div id="mainNavbar">
+                            <ul class="flex-column mr-auto">
+                                <li class="nav-item">
+                                       <a class="nav-link" href="/index.html">
+                                        <span class="glyphicon glyphicon-home"></span>
+                                        &nbsp;&nbsp;首页<span class="sr-only">(current)</span>
+                                       </a>
+                                </li>
+
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#" id="about" onclick="change()"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;关于我</a>
+                                </li>
+                                
+                                <li class="nav-item active dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#MenuDropdown" data-toggle="collapse" aria-controls="MenuDropdown" aria-expanded="false"><span class="glyphicon glyphicon-tags
+                                            glyphicon glyphicon-"></span> 分类</a>
+                                            <ul id="MenuDropdown" class="sub-navbar collapse flex-column">
+                                                
+                                                <span style="font-size: 20px;color: #000">tale</span>
+                                                
+                                                <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/24/draft.html">木兰诗</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/22/light.html">阿拉丁神灯</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/21/dark.html">丑小鸭</a></li>
+                                                
+                                                <li><a href="/tale/2019/12/15/456.html">美女与野兽</a></li>
+                                                
+                                                
+                                                <span style="font-size: 20px;color: #000">comic</span>
+                                                
+                                                <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
+                                                
+                                                
+                                            </ul>
+                                    
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;留言</a>
+                                </li>
+                            </ul>
+                        </div>   
+                    </nav>
+                
+                
+                
+                    <!-- Sidebar search form -->
+                    <form class="form-inline sidebar-search-form my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" size="10"  placeholder="Search" aria-label="Search">
+                        <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <!-- Social icons -->
+                    <p class="sidebar-social-icons social-icons">
+                        <a href="#"><i class="fa fa-qq fa-2x"></i></a>
+                        <a href="#"><i class="fa fa-weibo fa-2x"></i></a>
+                        <a href="https://github.com/monica183"><i class="fa fa-github fa-2x"></i></a>
+                        <!-- <a href="#"><i class="fa fa-instagram fa-2x"></i></a> -->
+                    </p>
+                    
+                    <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span>
+                    <img id="gif" src="/public/img/timg7854.gif">
+                </div>
+            </div> 
+        </div>
+        <div id="header1">
+            <!-- <img src="/public/img/01968d5d2843aba801214837dcf9c280w_1l_2o_100sh.jpg"> -->
+        </div>
+        
+        <div id="content" style="padding-left: 250px;">
+            <div id="content-wrapper" >
+                <!-- Main content area -->
+                <main class="container-fluid">
+                    <div class="row">
+                       
+                        <!-- Main content -->
+                        <div class="col" style="line-height: 30px;letter-spacing: 2px;margin-top: 100px;">
+                                <div id="title">
+                                    <h1 style="color: #fff" class="animated boomerang">白雪公主</h1>
+                                </div> 
+                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> 25日12月2019年</div>
+                                <p><br />      在故事开始时，王后坐在在一个敞开的窗户边，冬雪像针一样刺破了她的手指，导致三滴鲜血滴落在雪地和乌木窗框上。她欣赏着三种颜色的混合变化，对自己说:“哦，我多么希望我有一个女儿，皮肤像雪一样白，嘴唇像血一样红，头发黑得像乌木窗框”。不久之后，王后的确生一个女儿，皮肤像雪一样白，嘴唇像血一样红，头发黑得像乌木一样。他们便给她取名叫白雪公主。经过一年之后，国王娶了一个新妻子，这个妻子非常的美丽，但是她目空一切，非常骄傲。<!--more-->这个新王后拥有一个神奇的魔镜，每天早上她问:“魔镜在我手，谁是这块土地上最美丽的人?”。镜子总是回答说:“我的女王，在这块土地上，你是最美丽的。”女王总是感到很高兴，因为魔镜从来没有撒谎。但是，当白雪公主长到七岁，她变得美如天使甚至比女王更美丽。当王后问她的镜子，它回答:“我的女王，你是这里最美丽。但白雪公主比你更美丽一千倍。”
+女王很震惊，她的脸因为生气变得又绿又黄，内心充满嫉妒，从那一刻她开始反感白雪公主。嫉妒和骄傲，像杂草一般在她的内心生长，让她彻夜难眠。女王命令一个猎人把白雪公主带到森林的最深处杀掉。她要求猎人带回白雪公主的心肝，以证明白雪公主死了。猎人将白雪公主到森林里，但当他提高自己的刀后，他发现自己无法下狠心杀死她。白雪公主看见了猎人的举动抽泣得祈求猎人:“哦，亲爱的猎人，请不要杀我!让我自己了结我自己的生命，我将跑进森林，再也不会回来!”猎人认为他离开白雪公主后，女孩一定会被野生动物吃掉。他就向一个厨师要了野猪的心肝交给了女王。
+<!-- <div style="width: 300px;height: 175px; margin: 0 auto"><img src="/public/img/timg.gif" style="width: 300px;height: 175px"></div> -->
+      蜿蜒穿过森林后数日，白雪公主发现一个属于小矮人的小别墅。因为没有人在家，她吃一些饭，喝了点酒，然后拼起了所有的床。最后拼起的床足够让她舒适躺下，她就在床上睡着了。当小矮人回家时，他们立即就能知道有人偷偷潜入的，因为家里的一切都是一团糟。在他们大声讨论谁偷偷潜入了自己的家，最后发现熟睡的白雪公主。这时女孩醒来了，对他们解释发生了什么事，小矮人怜悯她，说:“如果你保持房子的整洁，做饭，铺床叠被，洗衣服，缝纫，和编织，并使一切干净有序，你就可以和我们住在一起，你会有你想要的一切。”但他们警告她独自在家时要小心，不要一个人到山里乱跑，也不要相信陌生人。</p>
+
+<p>      与此同时，皇后再次问她的镜子:“魔镜在我手，谁是这块土地上最美丽的?”镜子回答说:“我的女王，你是这里最美丽的。但远在七个小矮人家的白雪公主比你美丽几千倍。”女王惊恐地得知猎人已经背叛了她，白雪公主还活着。她思考着如何骗过白雪公主，然后，她把自己乔装成一个老小贩。女王走到小矮人的别墅，声称自己能提供色彩鲜艳，柔滑的鞋带，并说服白雪公主选取了最好的一根鞋带作为礼物。然后女王把这根施展了魔法鞋带紧紧绑在了白雪公主的脚上，白雪公主晕倒了过去。但小矮人回来时发现了这一情况，松开了魔法鞋带，让白雪公主重新醒了过来。
+      第二天早上女王询问她的镜子，镜子再次说明了白雪公主依然活着的消息。王后被激怒了，她打扮成一个卖梳子的商人，声称为白雪公主带一个漂亮梳子作为礼物。在她刷白雪公主的头发时，那一个有毒的魔法梳子让女孩晕倒了，但是小矮人们回来拔掉了梳子让白雪公主再一次醒来。第二天早上镜子告诉王后，白雪公主仍然是比她更加美丽的女人。听到这个消息女王的震惊和愤怒几乎让她的心脏停止跳动。作为第三次和也是最后的尝试，她偷偷查阅了最黑暗的魔法，使用一个带毒的苹果并且伪装一个农场主的妻子，带着这个苹果她找到了白雪公主。这次女孩因为之前几次的情况，首先是不愿接受的，所以女王削减一半的苹果，自己吃掉了白色（无害的）部分苹果，并且把给红色（毒）部分给白雪公主。白雪公主刚刚咬了一口就昏倒在地，再也无法醒过来，女王终于赢得了胜利。当小矮人们回到了别墅，发现自己无法救活这个女孩，因为他们无法找到白雪公主昏厥的原因，只能认为她已经死了，小矮人们无法承受失去白雪公主的伤痛，便把她安置在一个水晶棺材中，每天能够看到她。</p>
+
+<p>      时间很快过去了，一天一个骑着白马的王子经过了这里，发现了躺在棺材里睡着的白雪公主。他大步跨到她的棺材面前，被她的美丽深深吸引，立刻爱上了她。七个小矮人感动于他的苦苦恳求便同意让他带走装有白雪公主的水晶棺材，王子的仆人们抬棺木离开时，由于动作幅度很大，对棺木引起了强烈的震动。此次震动使那块毒苹果从白雪公主的喉咙里抖了出来，最后唤醒了她。王子随后声明他对她的爱，他们很快拟定了一个婚礼计划。这对夫妇邀请了大陆上每一个王后和国王来婚礼，包括白雪公主的继母。与此同时，女王，仍然相信白雪公主不是活着，再问她神奇的镜子，谁是这块土地上最美丽的女人。镜子说:“你，我的女王，是很美丽的。但白马王子那位年轻的女王是比你美丽一千倍。”
+这难以置信的消息让女王惊骇万分，女王心中充满了恐惧和怀疑。对于邀请犹豫不决，但她最终决定去。因为不知道这个新皇后确实是她的继女，她到达了婚礼，心里充满了最深的恐惧。当她意识到最后的真相时，已经无法逃走了。作为对她试图谋杀的惩罚，王子把一双烧红的铁鞋子让女王穿上。她随后被迫穿上铁鞋在火上跳舞，跳舞直到她最后死去。</p>
+                     
+                        </div>        
+                    </div> 
+                </main>
+                <!-- 评论区 -->
+                    <div class="aui-body-box">
+                        <div id="messageContent"></div>
+                        <div class="aui-user-img">
+                            <img src="/public/img/mz.png" id="avtar" alt="">
+                            <span id="nickname">萌主</span>
+                        </div>
+                        <input type="text" id="text" value="" placeholder="">
+                        <input type="button" id="btn8" value="发送" placeholder="">
+                    </div>
+
+                    <a href="" id="back" style="color: #fff">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Previous
+                    </a>
+                    <a href="/tale/2019/12/24/draft.html" id="back" style="float: right;color: #fff">
+                        Next&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                <!-- Footer -->
+                <div class="container-fluid footer-container">
+                    <footer class="footer">
+
+                        <div class="footer-bottom" style="color: #fff">
+                                
+                                <p class="text-center" ><a href="#" >Back to top</a></p>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bootcamp JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+        <script src="/public/js/bootstrap.min.js"></script>
+        <script src="/public/js/runtime.js"></script>
+        <script src="/public/js/jquery.arctext.js"></script>
+        <script>
+
+            var btn1 = document.getElementById('btn8');
+            var messageContent = document.getElementById('messageContent');
+            var text = document.getElementById('text');
+            var avtar = document.getElementById('avtar');
+            var nickname = document.getElementById('nickname');
+
+            btn8.onclick = function() {
+
+                var mes = text.value;
+                var imgSrc = avtar.src;
+                var nick = nickname.innerHTML;
+
+                if (f == 1) {
+                    messageContent.innerHTML = messageContent.innerHTML + '<p> <img src = " ' + imgSrc + ' " alt = "" ><span> ' + nick + ' </span> <span>:' + mes + '</span> </p> ';
+                } else {
+                    messageContent.innerHTML = messageContent.innerHTML + '<p class="aui-right"><img src = " ' + imgSrc + ' " alt = "" > <span>: ' + nick + '</span><span>' + mes + '</span>  </p> ';
+                }
+                text.value = '';
+            }
+
+            var f = 1;
+
+            nickname.onclick = avtar.onclick = function() {
+
+                if (f == 1) {
+                    nickname.innerHTML = '阿呆';
+                    avtar.src = '/public/img/20150813133233_nuNJk.jpeg';
+                    f = 0;
+                } else {
+                    nickname.innerHTML = '萌主';
+                    avtar.src = '/public/img/mz.png';
+                    f = 1;
+                }
+            }
+            var flag = 1;
+            function change(){
+                if (flag==1) {
+                    $('#head2').css({'display':'block'})
+                    $('#head').css({'display':'none'})
+                        flag=0;
+                }else{
+                    $('#head').css({'display':'block'})
+                     $('#head2').css({'display':'none'})
+                     flag=1;
+                }
+            }
+            $(function(){
+                $("#w2").show().arctext({
+                    radius:140
+                })
+            })
+        </script>
+    </body>
+</html>

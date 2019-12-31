@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+        <!-- Main CSS --> 
+        <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/index.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/load.css">
+        <!-- Font Awesome -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/animate.css">
+        <style>
+            #content-wrapper{
+               background:url(/public/img/20180313200247_isovl.jpg);
+            }
+
+        </style>
+    </head>
+  
+    <body>
+        <div id="app" style="position: absolute;z-index: 88888" >
+            <div class="text-wrapper">
+                <div class="text part1">
+                    <div style="padding-bottom: 40%;">
+                        <span class="letter"><div class="character">W</div> <span></span></span>
+                        <span class="letter"><div class="character">e</div> <span></span></span>
+                        <span class="letter"><div class="character">l</div> <span></span></span>
+                        <span class="letter"><div class="character">c</div> <span></span></span>
+                        <span class="letter"><div class="character">o</div> <span></span></span>
+                        <span class="letter"><div class="character">m</div> <span></span></span>
+                        <span class="letter"><div class="character">e</div> <span></span></span>
+                    </div>
+                </div>
+            </div>
+            <a href="#cl" id="start" style="margin-bottom: 400px;">Start</a>
+        </div>
+
+        <div id="sidebar">
+                      
+            <div class="navbar-expand-md navbar-dark"> 
+            
+                <header class="d-none d-md-block">
+                    <h3 id="w2" style="text-align: center;color: rgb(170,27,41);">m&nbsp;o&nbsp;n&nbsp;i&nbsp;c&nbsp;a&nbsp;b&nbsp;l&nbsp;o&nbsp;g</h3>
+                    <div id="head" >
+                        <img src="/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg"  >
+                        
+                    </div>
+                    <div id="head2" style="color: #fff;text-align: center;">
+                            <div style="padding-top:40%">一枚大三宅女</div>
+                            <span>人生理想：成为一个有钱人</span>
+<!--                             <span>梦想：成为一个有钱人</span> -->
+                    </div>
+                    <!-- <h1><span>my</span>blog</h1> -->
+                </header>
+                
+                
+                <!-- Mobile menu toggle and header -->
+                <div class="mobile-header-controls">
+                    
+                    
+                    <a class="navbar-brand d-md-none d-lg-none d-xl-none" href="#">
+                        <div id="head1" >
+                            <img src="/public/img/timg.jfif">
+
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SidebarContent" aria-controls="SidebarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+         
+                <div id="SidebarContent" class="collapse flex-column navbar-collapse">
+ 
+                        
+                    
+                    <!-- Main navigation items -->
+                    <nav class="navbar navbar-dark">
+                        <div id="mainNavbar">
+                            <ul class="flex-column mr-auto">
+                                <li class="nav-item">
+                                       <a class="nav-link" href="index.html">
+                                        <span class="glyphicon glyphicon-home"></span>
+                                        &nbsp;&nbsp;首页<span class="sr-only">(current)</span>
+                                       </a>
+                                </li>
+
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#" id="about" onclick="change()"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;关于我</a>
+                                </li>
+                                
+                                <li class="nav-item active dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#MenuDropdown" data-toggle="collapse" aria-controls="MenuDropdown" aria-expanded="false"><span class="glyphicon glyphicon-tags
+                                            glyphicon glyphicon-"></span> 分类</a>
+                                            <ul id="MenuDropdown" class="sub-navbar collapse flex-column">
+                                                
+                                                    <span style="font-size: 20px;color: #000">tale</span>
+                                                    
+                                                        <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
+                                                    
+                                                        <li><a href="/tale/2019/12/24/draft.html">木兰诗</a></li>
+                                                    
+                                                        <li><a href="/tale/2019/12/22/light.html">阿拉丁神灯</a></li>
+                                                    
+                                                        <li><a href="/tale/2019/12/21/dark.html">丑小鸭</a></li>
+                                                    
+                                                        <li><a href="/tale/2019/12/15/456.html">美女与野兽</a></li>
+                                                    
+                                                
+                                                    <span style="font-size: 20px;color: #000">comic</span>
+                                                    
+                                                        <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
+                                                    
+                                                
+                                            </ul>
+                                    
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;留言</a>
+                                </li>
+                            </ul>
+                        </div>   
+                    </nav>
+                
+                
+                    <!-- <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span> -->
+                    <!-- Sidebar search form -->
+                    <form class="form-inline sidebar-search-form my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" size="10"  placeholder="Search" aria-label="Search">
+                        <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <!-- Social icons -->
+                    <p class="sidebar-social-icons social-icons">
+                        <a href="#"><i class="fa fa-qq fa-2x"></i></a>
+                        <a href="#"><i class="fa fa-weibo fa-2x"></i></a>
+                        <a href="https://github.com/monica183"><i class="fa fa-github fa-2x"></i></a>
+                        <!-- <a href="#"><i class="fa fa-instagram fa-2x"></i></a> -->
+                    </p>
+                    
+                    <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span>
+                    <div style="display: none;width: 140px;height: 30px;background-color: #ccc;margin-left: 100px;border-radius: 10px;margin-bottom: 10px;color: #000;float: right;margin-top: 10px;text-align:center;" id="box1"><span>欢迎来到我的博客哟!</span></div>
+                    <img id="gif" src="/public/img/20180519223848_khhcx.png">
+                </div>
+            </div> 
+        </div>
+    
+        
+        <div id="content" >
+
+            <div id="content-wrapper" >
+                <main class="container-fluid">
+                    <div class="row">
+
+                        <!-- Main content -->
+                        <div class="col">
+                                
+<article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
+    <div class="row">
+        <div class="col-md-6" >
+           <h2 class="article-title" >丑小鸭</h2>
+            <br>
+            <p class="article-meta" style="width: 50%"><p>一枚天鹅蛋在鸭窠里被母鸭孵出后，因为长相与众不同而被大家当成丑小鸭。因此，自从蛋壳里爬出后来便到处挨打，被排挤，被讥笑，不仅在鸭群中是这样，在鸡群中也是这样。大家都要赶走这个可怜的丑小鸭。鸭儿们啄他，小鸡们打他，连喂鸡的女佣人也用脚踢他。于是他只好连夜飞过篱笆逃走了。他来到野鸭群被要求不能同野鸭结婚。在沼泽地里，他碰到两个调皮的公雁，公雁叫他和他们一起做一个候鸟，在另外一块沼泽地里有几只可爱的小姐他可以碰碰运气。正在他们交谈之间突然听到“啪啪”两声枪声，两只公雁落到芦苇里死了。</p>
+
+            </p>      
+            <a href="/tale/2019/12/21/dark.html" class="btn btn-primary">Read more</a>
+        </div>
+        <div class="col-md-6" style="margin-top: 80px;" id="pic">
+             <img src="/public/img/01a5095cb93f64a801214168b557881l_2o_100sh.jpg" style="width: 80%;">
+        </div>
+    </div>
+   
+</article>
+
+<article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
+    <div class="row">
+        <div class="col-md-6" >
+           <h2 class="article-title" >美女与野兽</h2>
+            <br>
+            <p class="article-meta" style="width: 50%"><p>古时候有一个非常有钱的商人，他一共有六个孩子：三个儿子和三个女儿。这个商人很明智，为了教育子女，他从不吝惜钱财，给他们请了各种各样的老师。
+　　他的女儿都很美丽，小女儿尤其出色。在她还是小姑娘的时候，人家就唤她为美妞，这个名字后来就一直保留下来了。她的两个姐姐却因此很妒忌她。
+　　小妹妹不仅比两个姐姐更美丽，而且也更善良。姐姐们仗着自己有钱，态度很傲慢。她们摆出一副贵妇人的架子，不屑与别的商人的女儿交往，而要门第高贵的人来跟她们做伴。她们每天出去跳舞、看戏、游逛，还要嘲笑小妹妹——她把绝大部分时间都用来阅读各种有益的书籍。
+　　好几个大商人听说这几个女孩子很富裕，都来向她们求婚。大姐二姐回答说，她们一定要嫁一个公爵，至少也得嫁个伯爵，否则永远不结婚。</p>
+
+            </p>      
+            <a href="/tale/2019/12/15/456.html" class="btn btn-primary">Read more</a>
+        </div>
+        <div class="col-md-6" style="margin-top: 80px;" id="pic">
+             <img src="/public/img/u=9932200138951&fm=26&gp=0.jpg" style="width: 80%;">
+        </div>
+    </div>
+   
+</article>
+
+
+<nav>
+    <ul class="pagination">
+	
+            <li class="page-item">
+                <a class="page-link" href="/" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+    
+    
+    		<li class="page-item">
+                <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+    
+    </ul>
+</nav>
+
+                        </div>        
+                    </div> 
+                </main>
+
+
+                <!-- Footer -->
+                <div class="container-fluid footer-container">
+                    <footer class="footer">
+
+                        <div class="footer-bottom">
+                                
+                                <p class="text-center" style="font-size: 15px"><a href="#top">Back to top</a></p>
+                                <span></span>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bootcamp JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+        <script src="/public/js/wow.min.js"></script>
+        <script src="/public/js/bootstrap.min.js"></script>
+        <script src="/public/js/runtime.js"></script>
+        <script src="/public/js/jquery.arctext.js"></script>
+        <script>
+            function a(){
+                 setTimeout(function(){
+
+                    $('.text-wrapper').css({'display':''})
+                    // alert('jkjl');
+
+                },1000);
+                   
+            }
+            
+            $('#start').click(function(){
+                $('#app').css({'display':'none'})
+            })
+            flag = 1;
+            function change(){
+                if (flag==1) {
+                    $('#head2').css({'display':'block'})
+                    $('#head').css({'display':'none'})
+                        flag=0;
+                }else{
+                    $('#head').css({'display':'block'})
+                     $('#head2').css({'display':'none'})
+                     flag=1;
+                }
+            }
+            $('#gif').hover(function(){
+                $('#box1').css({'display':'block'})
+            },function(){
+                $('#box1').css({'display':'none'})
+            })
+            $(function(){
+                $("#w2").show().arctext({
+                    radius:140
+                })
+            })
+            new WOW().init();
+        </script>
+    </body>
+</html>
