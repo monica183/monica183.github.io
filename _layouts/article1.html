@@ -115,25 +115,13 @@
                                     <a class="nav-link dropdown-toggle" href="#MenuDropdown" data-toggle="collapse" aria-controls="MenuDropdown" aria-expanded="false"><span class="glyphicon glyphicon-tags
                                             glyphicon glyphicon-"></span> 分类</a>
                                             <ul id="MenuDropdown" class="sub-navbar collapse flex-column">
-                                                
-                                                <span style="font-size: 20px;color: #000">tale</span>
-                                                
-                                                <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
-                                                
-                                                <li><a href="/tale/2019/12/24/draft.html">木兰诗</a></li>
-                                                
-                                                <li><a href="/tale/2019/12/22/light.html">阿拉丁神灯</a></li>
-                                                
-                                                <li><a href="/tale/2019/12/21/dark.html">丑小鸭</a></li>
-                                                
-                                                <li><a href="/tale/2019/12/15/456.html">美女与野兽</a></li>
-                                                
-                                                
-                                                <span style="font-size: 20px;color: #000">comic</span>
-                                                
-                                                <li><a href="/tale/comic/2019/12/25/123.html">白雪公主</a></li>
-                                                
-                                                
+                                                {% for category in site.categories %}
+                                                <span style="font-size: 20px;color: #000">{{ category | first }}</span>
+                                                {% for post in category.last %}
+                                                <li><a href="{{ post.url }}">{{
+                                                post.title }}</a></li>
+                                                {% endfor %}
+                                                {% endfor %}
                                             </ul>
                                     
                                 </li>
@@ -177,11 +165,10 @@
                         <!-- Main content -->
                         <div class="col" style="line-height: 30px;letter-spacing: 2px;margin-top: 100px;">
                                 <div id="title">
-                                    <h1 style="color: #fff" class="animated boomerang">丑小鸭</h1>
+                                    <h1 style="color: #fff" class="animated boomerang">{{page.title}}</h1>
                                 </div> 
-                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> 21日12月2019年</div>
-                                <p>一枚天鹅蛋在鸭窠里被母鸭孵出后，因为长相与众不同而被大家当成丑小鸭。因此，自从蛋壳里爬出后来便到处挨打，被排挤，被讥笑，不仅在鸭群中是这样，在鸡群中也是这样。大家都要赶走这个可怜的丑小鸭。鸭儿们啄他，小鸡们打他，连喂鸡的女佣人也用脚踢他。于是他只好连夜飞过篱笆逃走了。他来到野鸭群被要求不能同野鸭结婚。在沼泽地里，他碰到两个调皮的公雁，公雁叫他和他们一起做一个候鸟，在另外一块沼泽地里有几只可爱的小姐他可以碰碰运气。正在他们交谈之间突然听到“啪啪”两声枪声，两只公雁落到芦苇里死了。<!--more-->原来他们俩被猎人打死了。他只好再次逃离沼泽地来到一个农家小屋，因为他不能像母鸡一样下蛋，也不能像小猫一样拱起背发出咪咪的叫声和迸出火花而被要求不能有不同的看法。但是丑小鸭还是认为自己可以有不同的想法。他想在水里自由自在地游泳。当他看到美丽的天鹅展翅从寒冷的地带飞向不结冰的湖面时，丑小鸭不禁感到有一种说不出的兴奋。正是因为他认为自己可以有不同的想法，他才会选择飞向天鹅。他认为他被天鹅杀死，也要比被鸭子咬，被鸡群啄，被看管鸡场的那个女佣人踢和在冬天里受苦好得多。他来到天鹅群。他被大家看出是一只最美丽的天鹅而不是一只丑小鸭。他感到太幸福了，但他一点也不骄傲，因为他有一颗好的永远也不会骄傲的心。</p>
-                     
+                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> {{ page.date | date:"%d日%m月%Y年"}}</div>
+                                {{content}}                     
                         </div>        
                     </div> 
                 </main>
@@ -196,10 +183,10 @@
                         <input type="button" id="btn8" value="发送" placeholder="">
                     </div>
 
-                    <a href="/tale/2019/12/22/light.html" id="back" style="color: #fff">
+                    <a href="{{ page.next.url }}" id="back" style="color: #fff">
                         <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Previous
                     </a>
-                    <a href="/tale/2019/12/15/456.html" id="back" style="float: right;color: #fff">
+                    <a href="{{ page.previous.url }}" id="back" style="float: right;color: #fff">
                         Next&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 <!-- Footer -->
