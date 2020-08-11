@@ -6515,7 +6515,8 @@ main {
 }
 
 #content {
-  margin-left: 0; }
+  margin-left: 0; 
+}
 
 a, .page-link {
   color: #80B763, 10%;
@@ -6822,7 +6823,8 @@ html {
     width: 250px;
     background-color: #35353E;
     position: fixed;
-    padding: 0; }
+    padding: 0;
+  }
 
   #content {
     padding-left: 250px; 
