@@ -1,11 +1,4 @@
----
-title: Java基本数据类型
-category: Java
-excerpt_separator: <!--more-->
-layout: article1
-photo: /public/img/01fc425d31651aa80120695ca9d2_1l_2o_100sh.jpg
----
- 数据类型
+I"�<p>数据类型
        基本数据类型：8个
            整型：默认值为0，默认类型为int
                byte：1个字节，8位，二进制：0000 0000，-128~127
@@ -16,7 +9,7 @@ photo: /public/img/01fc425d31651aa80120695ca9d2_1l_2o_100sh.jpg
                float：单精度，4个字节，1.0f或1.0F。F或f只有在编码的必写，打印不会有
                double：双精度，8个字节, 1.0
            字符型：只能使用单引号包裹，有且只有一个
-               char：'a'、'中'。非法字符'ab'，不是字符，而字符串
+               char：’a’、’中’。非法字符’ab’，不是字符，而字符串
                ASCII编码
            布尔型：默认值为false
                boolean：只有true和false，没有0或非0及其它的表现形式
@@ -25,14 +18,15 @@ photo: /public/img/01fc425d31651aa80120695ca9d2_1l_2o_100sh.jpg
            数组：[]定义
            接口：使用interface定义
    基本数据类型的顺序
-       从小到大：byte short char int long float double
- 
-   基本数据类型之间转换
+       从小到大：byte short char int long float double</p>
+
+<p>基本数据类型之间转换
        就是指byte short char int long float double这7个类型之间可以相互转换
-       自动转换：容量小的自动转换为容量大
-           
-       强制转换：容量大只能强制转换为容量小
-           格式：数据类型 变量名 = (数据类型)值;
-   基本数据类型之间运算
-       1、byte short char：这三个运算结果都int类型
-       2、运算结果以最大的类型返回
+       自动转换：容量小的自动转换为容量大</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   强制转换：容量大只能强制转换为容量小
+       格式：数据类型 变量名 = (数据类型)值;    基本数据类型之间运算
+   1、byte short char：这三个运算结果都int类型
+   2、运算结果以最大的类型返回
+</code></pre></div></div>
+:ET
