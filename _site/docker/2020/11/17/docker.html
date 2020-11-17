@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+        <!-- Main CSS --> 
+        <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="/public/css/mimic.min.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/mimic.css">
+        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/index.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/load.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/comment.css">
+        <!-- Font Awesome -->
+       
+    </head>
+    <style>
+    body{
+        /*background-image: url(/public/img/01ffde5d68d9fca80120526dc5813c.j_1l_2o_100sh.jpg);*/
+        /*position: fixed;*/
+    }
+    #header1 img{
+        width: 100%;
+        height: 400px;
+    }
+        .MenuDropdown span{
+             font-size: 16px;
+             color: #000;
+             font-weight: bold;
+        }
+        .col{
+             padding: 50px;
+             margin-top: 70px;
+             width: 60%;
+             background-color: #74787a;
+        }
+        #title{
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #date{
+            /*display: block;;*/
+            width: 100%;
+            height: 20px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        body{
+               background:url(/public/img/01be365e06c929a80120a8957117_100sh.jpg);
+            }
+    </style>
+    <body style="color: #fff">
+         <!-- Main navigation -->
+        <div id="sidebar">
+                      
+            <div class="navbar-expand-md navbar-dark"> 
+            
+                <header class="d-none d-md-block">
+                    <h3 id="w2" style="text-align: center;color: rgb(170,27,41);">m&nbsp;o&nbsp;n&nbsp;i&nbsp;c&nbsp;a&nbsp;b&nbsp;l&nbsp;o&nbsp;g</h3>
+                    <div id="head" >
+                        <img src="/public/img/img-f51a411f8ab92d8ea3155e73dc7cc263.jpg"  >
+                        
+                    </div>
+                    <div id="head2" style="color: #fff;text-align: center;">
+                            <div style="padding-top:40%">一枚大三宅女</div>
+                            <span>人生理想：成为一个有钱人</span>
+                    </div>
+                </header>
+                
+                
+                <!-- Mobile menu toggle and header -->
+                <div class="mobile-header-controls">
+                    
+                    
+                    <a class="navbar-brand d-md-none d-lg-none d-xl-none" href="#">
+                        <div id="head1" >
+                            <img src="/public/img/timg.jfif">
+
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SidebarContent" aria-controls="SidebarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+         
+                <div id="SidebarContent" class="collapse flex-column navbar-collapse">
+ 
+                        
+                    
+                    <!-- Main navigation items -->
+                    <nav class="navbar navbar-dark">
+                        <div id="mainNavbar">
+                            <ul class="flex-column mr-auto">
+                                <li class="nav-item">
+                                       <a class="nav-link" href="/index.html">
+                                        <span class="glyphicon glyphicon-home"></span>
+                                        &nbsp;&nbsp;首页<span class="sr-only">(current)</span>
+                                       </a>
+                                </li>
+
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#" id="about" onclick="change()"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;关于我</a>
+                                </li>
+                                
+                                <li class="nav-item active dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#MenuDropdown" data-toggle="collapse" aria-controls="MenuDropdown" aria-expanded="false"><span class="glyphicon glyphicon-tags
+                                            glyphicon glyphicon-"></span> 分类</a>
+                                            <ul id="MenuDropdown" class="sub-navbar collapse flex-column">
+                                                
+                                                    <span style="font-size: 20px;color: #000">Linux</span>
+                                                    
+                                                        <li><a href="/linux/2019/11/10/linux.html">Linux常用命令</a></li>
+                                                    
+                                                
+                                                    <span style="font-size: 20px;color: #000">Java</span>
+                                                    
+                                                        <li><a href="/java/2019/12/27/extend.html">Java继承与多态</a></li>
+                                                    
+                                                        <li><a href="/java/2019/12/26/arraysort.html">Java关键字</a></li>
+                                                    
+                                                        <li><a href="/java/2019/12/25/array.html">Java数组</a></li>
+                                                    
+                                                        <li><a href="/java/2019/12/24/yunsuanfu.html">Java运算符</a></li>
+                                                    
+                                                        <li><a href="/java/2019/12/22/datatype.html">Java基本数据类型</a></li>
+                                                    
+                                                        <li><a href="/java/2019/12/21/start.html">Java入门</a></li>
+                                                    
+                                                        <li><a href="/java/2019/12/15/string.html">String、StringBuffer、StringBuilder使用</a></li>
+                                                    
+                                                
+                                                    <span style="font-size: 20px;color: #000">docker</span>
+                                                    
+                                                        <li><a href="/docker/2020/11/17/dockermingling.html">Docker常用命令</a></li>
+                                                    
+                                                        <li><a href="/docker/2020/11/17/docker.html">SpringBoot项目部署到服务器</a></li>
+                                                    
+                                                
+                                            </ul>
+                                    
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;留言</a>
+                                </li>
+                            </ul>
+                        </div>   
+                    </nav>
+                
+                
+                    <!-- <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span> -->
+                    <!-- Sidebar search form -->
+                    <form class="form-inline sidebar-search-form my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" size="10"  placeholder="Search" aria-label="Search">
+                        <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <!-- Social icons -->
+                    <p class="sidebar-social-icons social-icons">
+                        <a href="#"><i class="fa fa-qq fa-2x"></i></a>
+                        <a href="#"><i class="fa fa-weibo fa-2x"></i></a>
+                        <a href="https://github.com/monica183"><i class="fa fa-github fa-2x"></i></a>
+                        <!-- <a href="#"><i class="fa fa-instagram fa-2x"></i></a> -->
+                    </p>
+                    
+                    <i class="fa fa-cog fa-spin fa-fw"></i> <span id="run_time"></span>
+                    <div style="display: none;width: 140px;height: 30px;background-color: #ccc;margin-left: 100px;border-radius: 10px;margin-bottom: 10px;color: #000;float: right;margin-top: 10px;text-align:center;" id="box1"><span>欢迎来到我的博客哟!</span></div>
+                    <img id="gif" src="/public/img/20180519223848_khhcx.png">
+                </div>
+            </div> 
+        </div>
+        
+        <div id="header1">
+            <!-- <img src="/public/img/01968d5d2843aba801214837dcf9c280w_1l_2o_100sh.jpg"> -->
+        </div>
+        
+        <div id="content">
+            <div id="content-wrapper" >
+                <!-- Main content area -->
+                <main class="container-fluid">
+                    <div class="row">
+                       
+                        <!-- Main content -->
+                        <div class="col" style="line-height: 30px;letter-spacing: 2px;margin-top: 100px;">
+                                <div id="title">
+                                    <h1 style="color: #fff" class="animated boomerang">SpringBoot项目部署到服务器</h1>
+                                </div> 
+                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> 17日11月2020年</div>
+                                <h5 id="一使用xshell登录服务器">一.使用Xshell登录服务器</h5>
+
+<h5 id="二服务器配置安装docker">二.服务器配置安装docker</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>步骤：1.卸载旧版本
+    sudo yum remove docker \
+     docker-client \
+     docker-client-latest \
+     docker-common \
+     docker-latest \
+     docker-latest-logrotate \
+     docker-logrotate \
+     docker-engine
+	2.安装 Docker Engine-Community
+	安装所需的软件包。yum-utils 提供了 yum-config-manager ，并且 	  device mapper 存储驱动程序需要device-mapper-persistent-data 	  和lvm2。&lt;!--more--&gt;
+	sudo yum install -y yum-utils \
+     device-mapper-persistent-data \
+     lvm2
+    使⽤以下命令来设置稳定的仓库。
+    #官⽅默认下载
+    sudo yum-config-manager \
+     --add-repo \
+     https://download.docker.com/linux/centos/docker-ce.repo
+    3.安装 Docker Engine-Community
+    sudo yum install docker-ce docker-ce-cli containerd.io
+    4.启动Docker
+    sudo systemctl start docker 
+    5.镜像加速
+    vim /etc/docker/daemon.json
+    #输⼊
+    {
+     "registry-mirrors": ["http://hub-mirror.c.163.com"] 
+    }
+    6.重启服务
+    sudo systemctl daemon-reload
+	sudo systemctl restart docker
+</code></pre></div></div>
+
+<h5 id="三安装mysql">三.安装mysql</h5>
+
+<ol>
+  <li>下载mysql5.7的docker镜像</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull mysql:5.7
+</code></pre></div></div>
+
+<p>2.使⽤docker命令启动</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -p 3306:3306 --name mysql5.7 \
+-v /mydata/mysql/log:/var/log/mysql \
+-v /mydata/mysql/data:/var/lib/mysql \
+-v /mydata/mysql/conf:/etc/mysql \
+-e MYSQL_ROOT_PASSWORD=密码 \
+-d mysql:5.7
+</code></pre></div></div>
+
+<p>参数说明</p>
+
+<p>-p 3306:3306：将容器的3306端⼝映射到主机的3306端⼝</p>
+
+<p>-v /mydata/mysql/conf:/etc/mysql：将配置⽂件夹挂在到主机</p>
+
+<p>-v /mydata/mysql/log:/var/log/mysql：将⽇志⽂件夹挂载到主机</p>
+
+<p>-v /mydata/mysql/data:/var/lib/mysql/：将数据⽂件夹挂载到主机</p>
+
+<p>-e MYSQL_ROOT_PASSWORD=root：初始化root⽤户的密码</p>
+
+<p>3.查看MySQL容器是否启动成功或是启动后被关闭</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps #查看正在运行的容器
+docker start 容器名 #启动容器
+</code></pre></div></div>
+
+<p>4.使用idea连接MySQL数据库测试是否连接成功</p>
+
+<h5 id="四idea安装docker插件">四.idea安装docker插件</h5>
+
+<p>配置docker，端口前面是服务器地址</p>
+
+<p><img src="/public/img/1.png" alt="image-20201117141452147" height="70%" width="70%" /></p>
+
+<p>出现错误</p>
+
+<p><img src="/public/img/2.png" alt="image-20201117143652109" /></p>
+
+<p>解决方法：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /usr/lib/systemd/system/docker.service
+</code></pre></div></div>
+
+<p><img src="/public/img/3.png" alt="image-20201117143121201" height="70%" width="70%" /></p>
+
+<p>如果还是解决不了</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1、开放防火墙端口
+
+firewall-cmd --zone=public --add-port=2375/tcp --permanent   # 开放5672端口
+
+firewall-cmd --reload   # 配置立即生效
+
+2、查看防火墙所有开放的端口
+
+firewall-cmd --zone=public --list-ports
+</code></pre></div></div>
+
+<h5 id="五配置项目">五.配置项目</h5>
+
+<p>配置项目pom文件</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+        <span class="nt">&lt;docker.host&gt;</span>http://服务器地址:2375<span class="nt">&lt;/docker.host&gt;</span>
+        <span class="nt">&lt;docker.maven.plugin.version&gt;</span>1.1.0<span class="nt">&lt;/docker.maven.plugin.version&gt;</span>
+ <span class="nt">&lt;/properties&gt;</span>    
+
+<span class="c">&lt;!--必要，打包可执行的jar包--&gt;</span>
+<span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+<span class="c">&lt;!--docker的配置--&gt;</span>
+<span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.spotify<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>docker-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${docker.maven.plugin.version}<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;executions&gt;</span>
+        <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>build-image<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;phase&gt;</span>package<span class="nt">&lt;/phase&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+                <span class="nt">&lt;goal&gt;</span>build<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+        <span class="nt">&lt;/execution&gt;</span>
+    <span class="nt">&lt;/executions&gt;</span>
+    <span class="nt">&lt;configuration&gt;</span>
+        <span class="c">&lt;!--生成images文件名--&gt;</span>
+        <span class="nt">&lt;imageName&gt;</span>
+            stumanager/${project.artifactId}:${project.version}									<span class="nt">&lt;/imageName&gt;</span>
+        <span class="c">&lt;!--主机地址--&gt;</span>
+        <span class="nt">&lt;dockerHost&gt;</span>${docker.host}<span class="nt">&lt;/dockerHost&gt;</span>
+        <span class="c">&lt;!--依赖的docker容器--&gt;</span>
+        <span class="nt">&lt;baseImage&gt;</span>java:8<span class="nt">&lt;/baseImage&gt;</span>
+        <span class="nt">&lt;entryPoint&gt;</span>
+            ["java", "-jar", "-					Dspring.profiles.active=prod","/${project.build.finalName}.jar"]
+        <span class="nt">&lt;/entryPoint&gt;</span>
+        <span class="nt">&lt;resources&gt;</span>
+            <span class="nt">&lt;resource&gt;</span>
+                <span class="nt">&lt;targetPath&gt;</span>/<span class="nt">&lt;/targetPath&gt;</span>
+                <span class="nt">&lt;directory&gt;</span>${project.build.directory}<span class="nt">&lt;/directory&gt;</span>
+                <span class="nt">&lt;include&gt;</span>${project.build.finalName}.jar<span class="nt">&lt;/include&gt;</span>
+            <span class="nt">&lt;/resource&gt;</span>
+        <span class="nt">&lt;/resources&gt;</span>
+    <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+
+<p>配置application.yaml</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> url: jdbc:mysql://服务器地址:3306/dormsystem?useUnicode=true&amp;characterEncoding=utf8
+
+</code></pre></div></div>
+
+<h5 id="六打包项目">六.打包项目</h5>
+
+<p><img src="/public/img/4.png" alt="image-20201117142652365" /></p>
+
+<p>打包项目成功之后，在docker中生成镜像，右键镜像生成项目容器，配置容器名称和端口映射</p>
+
+<p><img src="/public/img/5.png" alt="image-20201117143401430" height="70%" width="70%" /></p>
+
+<h5 id="七访问项目">七.访问项目</h5>
+
+<p>通过服务器地址:端口号去访问</p>
+
+<p>更改项目时，需重新打包热部署</p>
+
+<p>打包出错，查看MySQL是否启动</p>
+                     
+                        </div>        
+                    </div> 
+                </main>
+                <!-- 评论区 -->
+                    <div class="aui-body-box">
+                        <div id="messageContent"></div>
+                        <div class="aui-user-img">
+                            <img src="/public/img/mz.png" id="avtar" alt="">
+                            <span id="nickname">萌主</span>
+                        </div>
+                        <input type="text" id="text" value="" placeholder="">
+                        <input type="button" id="btn8" value="发送" placeholder="">
+                    </div>
+
+                    <a href="/docker/2020/11/17/dockermingling.html" id="back" style="color: #fff">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Previous
+                    </a>
+                    <a href="/java/2019/12/27/extend.html" id="back" style="float: right;color: #fff">
+                        Next&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                <!-- Footer -->
+                <div class="container-fluid footer-container">
+                    <footer class="footer">
+
+                        <div class="footer-bottom" style="color: #fff">
+                                
+                                <p class="text-center" ><a href="#" >Back to top</a></p>
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bootcamp JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+        <script src="/public/js/bootstrap.min.js"></script>
+        <script src="/public/js/runtime.js"></script>
+        <script src="/public/js/jquery.arctext.js"></script>
+        <script>
+
+            var btn1 = document.getElementById('btn8');
+            var messageContent = document.getElementById('messageContent');
+            var text = document.getElementById('text');
+            var avtar = document.getElementById('avtar');
+            var nickname = document.getElementById('nickname');
+
+            btn8.onclick = function() {
+
+                var mes = text.value;
+                var imgSrc = avtar.src;
+                var nick = nickname.innerHTML;
+
+                if (f == 1) {
+                    messageContent.innerHTML = messageContent.innerHTML + '<p> <img src = " ' + imgSrc + ' " alt = "" ><span> ' + nick + ' </span> <span>:' + mes + '</span> </p> ';
+                } else {
+                    messageContent.innerHTML = messageContent.innerHTML + '<p class="aui-right"><img src = " ' + imgSrc + ' " alt = "" > <span>: ' + nick + '</span><span>' + mes + '</span>  </p> ';
+                }
+                text.value = '';
+            }
+
+            var f = 1;
+
+            nickname.onclick = avtar.onclick = function() {
+
+                if (f == 1) {
+                    nickname.innerHTML = '阿呆';
+                    avtar.src = '/public/img/20150813133233_nuNJk.jpeg';
+                    f = 0;
+                } else {
+                    nickname.innerHTML = '萌主';
+                    avtar.src = '/public/img/mz.png';
+                    f = 1;
+                }
+            }
+            var flag = 1;
+            function change(){
+                if (flag==1) {
+                    $('#head2').css({'display':'block'})
+                    $('#head').css({'display':'none'})
+                        flag=0;
+                }else{
+                    $('#head').css({'display':'block'})
+                     $('#head2').css({'display':'none'})
+                     flag=1;
+                }
+            }
+            $(function(){
+                $("#w2").show().arctext({
+                    radius:140
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+I"�<h5 id="string">String：</h5>
+
+<p>默认的字符串类，当内容变化时，不能修改内存中的数据，而将原来的地址抛弃，变化后的字符保存到新地址中
+           缺点是在频繁修改的时候，内存消耗大。
+           常用方法
+               charAt(int index) 返回 char指定索引处的值。 
+               length()：方法，获取字符串的长度，有一个面试题就是问数组与字符串的长度是方法还是属性？
+               concat(String str) 将指定的字符串连接到该字符串的末尾。相当于+拼接 
+               contains(CharSequence s) 当且仅当此字符串包含指定的char值序列时才返回true。 CharSequence是字符序列
+                可以传String类型的值，这是Java多态的一个体现
+               startWith(String suffix) endsWith(String suffix) 与JS一样
+               equals(Object anObject) 将此字符串与指定对象进行比较。先进行地址比较，地址不一样且anObject是字符串再比较内容
+               equalsIgnoreCase(String anotherString) 无视大小写
+               indexOf(String ch)</p>
+:ET

@@ -1,0 +1,182 @@
+I"�<h2 id="springboot项目部署到服务器">SpringBoot项目部署到服务器</h2>
+
+<h5 id="一使用xshell登录服务器">一.使用Xshell登录服务器</h5>
+
+<h5 id="二服务器配置安装docker">二.服务器配置安装docker</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>步骤：1.卸载旧版本
+    sudo yum remove docker \
+     docker-client \
+     docker-client-latest \
+     docker-common \
+     docker-latest \
+     docker-latest-logrotate \
+     docker-logrotate \
+     docker-engine
+	2.安装 Docker Engine-Community
+	安装所需的软件包。yum-utils 提供了 yum-config-manager ，并且 	  device mapper 存储驱动程序需要device-mapper-persistent-data 	  和lvm2。&lt;!--more--&gt;
+	sudo yum install -y yum-utils \
+     device-mapper-persistent-data \
+     lvm2
+    使⽤以下命令来设置稳定的仓库。
+    #官⽅默认下载
+    sudo yum-config-manager \
+     --add-repo \
+     https://download.docker.com/linux/centos/docker-ce.repo
+    3.安装 Docker Engine-Community
+    sudo yum install docker-ce docker-ce-cli containerd.io
+    4.启动Docker
+    sudo systemctl start docker 
+    5.镜像加速
+    vim /etc/docker/daemon.json
+    #输⼊
+    {
+     "registry-mirrors": ["http://hub-mirror.c.163.com"] 
+    }
+    6.重启服务
+    sudo systemctl daemon-reload
+	sudo systemctl restart docker
+</code></pre></div></div>
+
+<h5 id="三安装mysql">三.安装mysql</h5>
+
+<ol>
+  <li>下载mysql5.7的docker镜像</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull mysql:5.7
+</code></pre></div></div>
+
+<p>2.使⽤docker命令启动</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -p 3306:3306 --name mysql5.7 \
+-v /mydata/mysql/log:/var/log/mysql \
+-v /mydata/mysql/data:/var/lib/mysql \
+-v /mydata/mysql/conf:/etc/mysql \
+-e MYSQL_ROOT_PASSWORD=密码 \
+-d mysql:5.7
+</code></pre></div></div>
+
+<p>参数说明</p>
+
+<p>-p 3306:3306：将容器的3306端⼝映射到主机的3306端⼝</p>
+
+<p>-v /mydata/mysql/conf:/etc/mysql：将配置⽂件夹挂在到主机</p>
+
+<p>-v /mydata/mysql/log:/var/log/mysql：将⽇志⽂件夹挂载到主机</p>
+
+<p>-v /mydata/mysql/data:/var/lib/mysql/：将数据⽂件夹挂载到主机</p>
+
+<p>-e MYSQL_ROOT_PASSWORD=root：初始化root⽤户的密码</p>
+
+<p>3.查看MySQL容器是否启动成功或是启动后被关闭</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps #查看正在运行的容器
+docker start 容器名 #启动容器
+</code></pre></div></div>
+
+<p>4.使用idea连接MySQL数据库测试是否连接成功</p>
+
+<h5 id="四idea安装docker插件">四.idea安装docker插件</h5>
+
+<p>配置docker，端口前面是服务器地址</p>
+
+<p><img src="/public/img/1.png" alt="image-20201117141452147" height="70%" width="70%" /></p>
+
+<p>出现错误</p>
+
+<p><img src="/public/img/2.png" alt="image-20201117143652109" /></p>
+
+<p>解决方法：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /usr/lib/systemd/system/docker.service
+</code></pre></div></div>
+
+<p><img src="/public/img/3.png" alt="image-20201117143121201" height="70%" width="70%" /></p>
+
+<p>如果还是解决不了</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1、开放防火墙端口
+
+firewall-cmd --zone=public --add-port=2375/tcp --permanent   # 开放5672端口
+
+firewall-cmd --reload   # 配置立即生效
+
+2、查看防火墙所有开放的端口
+
+firewall-cmd --zone=public --list-ports
+</code></pre></div></div>
+
+<h5 id="五配置项目">五.配置项目</h5>
+
+<p>配置项目pom文件</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+        <span class="nt">&lt;docker.host&gt;</span>http://服务器地址:2375<span class="nt">&lt;/docker.host&gt;</span>
+        <span class="nt">&lt;docker.maven.plugin.version&gt;</span>1.1.0<span class="nt">&lt;/docker.maven.plugin.version&gt;</span>
+ <span class="nt">&lt;/properties&gt;</span>    
+
+<span class="c">&lt;!--必要，打包可执行的jar包--&gt;</span>
+<span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+<span class="c">&lt;!--docker的配置--&gt;</span>
+<span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.spotify<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>docker-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${docker.maven.plugin.version}<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;executions&gt;</span>
+        <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>build-image<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;phase&gt;</span>package<span class="nt">&lt;/phase&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+                <span class="nt">&lt;goal&gt;</span>build<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+        <span class="nt">&lt;/execution&gt;</span>
+    <span class="nt">&lt;/executions&gt;</span>
+    <span class="nt">&lt;configuration&gt;</span>
+        <span class="c">&lt;!--生成images文件名--&gt;</span>
+        <span class="nt">&lt;imageName&gt;</span>
+            stumanager/${project.artifactId}:${project.version}									<span class="nt">&lt;/imageName&gt;</span>
+        <span class="c">&lt;!--主机地址--&gt;</span>
+        <span class="nt">&lt;dockerHost&gt;</span>${docker.host}<span class="nt">&lt;/dockerHost&gt;</span>
+        <span class="c">&lt;!--依赖的docker容器--&gt;</span>
+        <span class="nt">&lt;baseImage&gt;</span>java:8<span class="nt">&lt;/baseImage&gt;</span>
+        <span class="nt">&lt;entryPoint&gt;</span>
+            ["java", "-jar", "-					Dspring.profiles.active=prod","/${project.build.finalName}.jar"]
+        <span class="nt">&lt;/entryPoint&gt;</span>
+        <span class="nt">&lt;resources&gt;</span>
+            <span class="nt">&lt;resource&gt;</span>
+                <span class="nt">&lt;targetPath&gt;</span>/<span class="nt">&lt;/targetPath&gt;</span>
+                <span class="nt">&lt;directory&gt;</span>${project.build.directory}<span class="nt">&lt;/directory&gt;</span>
+                <span class="nt">&lt;include&gt;</span>${project.build.finalName}.jar<span class="nt">&lt;/include&gt;</span>
+            <span class="nt">&lt;/resource&gt;</span>
+        <span class="nt">&lt;/resources&gt;</span>
+    <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+
+<p>配置application.yaml</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> url: jdbc:mysql://服务器地址:3306/dormsystem?useUnicode=true&amp;characterEncoding=utf8
+
+</code></pre></div></div>
+
+<h5 id="六打包项目">六.打包项目</h5>
+
+<p><img src="/public/img/4.png" alt="image-20201117142652365" /></p>
+
+<p>打包项目成功之后，在docker中生成镜像，右键镜像生成项目容器，配置容器名称和端口映射</p>
+
+<p><img src="/public/img/5.png" alt="image-20201117143401430" height="70%" width="70%" /></p>
+
+<h5 id="七访问项目">七.访问项目</h5>
+
+<p>通过服务器地址:端口号去访问</p>
+
+<p>更改项目时，需重新打包热部署</p>
+
+<p>打包出错，查看MySQL是否启动</p>
+:ET

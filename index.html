@@ -5,16 +5,16 @@ layout: index
 {% for post in paginator.posts %}
 <article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
     <div class="row">
-        <div class="col-md-6" >
+        <div class="col-md-12" >
            <h2 class="article-title" >{{post.title}}</h2>
             <br>
             <p class="article-meta" style="width: 50%">{{post.excerpt}}
             </p>      
             <a href="{{ post.url }}" class="btn btn-primary">Read more</a>
         </div>
-        <div class="col-md-6" style="margin-top: 80px;" id="pic">
+        <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
              <img src="{{ post.photo }}" style="width: 80%;">
-        </div>
+        </div> -->
     </div>
    
 </article>

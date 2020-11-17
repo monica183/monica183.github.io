@@ -1,0 +1,17 @@
+I"k<h5 id="一使用xshell登录服务器">一.使用Xshell登录服务器</h5>
+
+<h5 id="二服务器配置安装docker">二.服务器配置安装docker</h5>
+
+<p>```
+步骤：1.卸载旧版本
+    sudo yum remove docker <br />
+     docker-client <br />
+     docker-client-latest <br />
+     docker-common <br />
+     docker-latest <br />
+     docker-latest-logrotate <br />
+     docker-logrotate <br />
+     docker-engine
+	2.安装 Docker Engine-Community
+	安装所需的软件包。yum-utils 提供了 yum-config-manager ，并且 	  device mapper 存储驱动程序需要device-mapper-persistent-data 	  和lvm2。</p>
+:ET

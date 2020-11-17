@@ -1,0 +1,13 @@
+I"8<p>cd (change directory)切换目录
+cd           #root根目录
+cd   /       #系统根目录 
+cd  ../../   #返回上上一层目录 
+ls/dir （list）列出目录下文件 
+ls  -a      （–all）                #列出所有文件
+ls  -d      （–directory）      #列出目录
+ls  -i      （–inode）            #显示每个文件的inode 号（索引节点号，可以理解为文件的存储地址） 
+ls  -l      （-long）               #较长格式列出
+ls  -lh     （–human-readable）与-l #人性化阅读输出
+clear清屏
+clear 清屏</p>
+:ET

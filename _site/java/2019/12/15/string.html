@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<head>
+    <head>
         <title>Home</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,41 +8,56 @@
 
         <!-- Main CSS --> 
         <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="/public/css/mimic.min.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/mimic.css">
         <link rel="stylesheet" href="/public/css/style.css">
         <link rel="stylesheet" type="text/css" href="/public/css/index.css">
          <link rel="stylesheet" type="text/css" href="/public/css/load.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/comment.css">
         <!-- Font Awesome -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.css">
-        <link rel="stylesheet" type="text/css" href="/public/css/animate.css">
-        <style>
-            #content-wrapper{
-               /*background:url(/public/img/20180313200247_isovl.jpg);*/
-               background-color:rgb(178,174,162);
-            }
-
-        </style>
+       
     </head>
-  
-    <body>
-        <!-- <div id="app" style="position: absolute;z-index: 88888" >
-            <div class="text-wrapper">
-                <div class="text part1">
-                    <div style="padding-bottom: 100%;">
-                        <span class="letter"><div class="character">W</div> <span></span></span>
-                        <span class="letter"><div class="character">e</div> <span></span></span>
-                        <span class="letter"><div class="character">l</div> <span></span></span>
-                        <span class="letter"><div class="character">c</div> <span></span></span>
-                        <span class="letter"><div class="character">o</div> <span></span></span>
-                        <span class="letter"><div class="character">m</div> <span></span></span>
-                        <span class="letter"><div class="character">e</div> <span></span></span>
-                    </div>
-                </div>
-            </div>
-            <a href="#cl" id="start" style="margin-bottom: 400px;">Start</a>
-        </div> -->
-
+    <style>
+    body{
+        /*background-image: url(/public/img/01ffde5d68d9fca80120526dc5813c.j_1l_2o_100sh.jpg);*/
+        /*position: fixed;*/
+    }
+    #header1 img{
+        width: 100%;
+        height: 400px;
+    }
+        .MenuDropdown span{
+             font-size: 16px;
+             color: #000;
+             font-weight: bold;
+        }
+        .col{
+             padding: 50px;
+             margin-top: 70px;
+             width: 60%;
+             background-color: #74787a;
+        }
+        #title{
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #date{
+            /*display: block;;*/
+            width: 100%;
+            height: 20px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        body{
+               background:url(/public/img/01be365e06c929a80120a8957117_100sh.jpg);
+            }
+    </style>
+    <body style="color: #fff">
+         <!-- Main navigation -->
         <div id="sidebar">
                       
             <div class="navbar-expand-md navbar-dark"> 
@@ -84,7 +99,7 @@
                         <div id="mainNavbar">
                             <ul class="flex-column mr-auto">
                                 <li class="nav-item">
-                                       <a class="nav-link" href="index.html">
+                                       <a class="nav-link" href="/index.html">
                                         <span class="glyphicon glyphicon-home"></span>
                                         &nbsp;&nbsp;首页<span class="sr-only">(current)</span>
                                        </a>
@@ -159,178 +174,105 @@
                 </div>
             </div> 
         </div>
-    
         
-        <div id="content" >
-
+        <div id="header1">
+            <!-- <img src="/public/img/01968d5d2843aba801214837dcf9c280w_1l_2o_100sh.jpg"> -->
+        </div>
+        
+        <div id="content">
             <div id="content-wrapper" >
+                <!-- Main content area -->
                 <main class="container-fluid">
                     <div class="row">
-
+                       
                         <!-- Main content -->
-                        <div class="col">
-                                
-<article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
-    <div class="row">
-        <div class="col-md-12" >
-           <h2 class="article-title" >Java关键字</h2>
-            <br>
-            <p class="article-meta" style="width: 50%"><h5 id="this表示当前执行的对象">this：表示当前执行的对象</h5>
+                        <div class="col" style="line-height: 30px;letter-spacing: 2px;margin-top: 100px;">
+                                <div id="title">
+                                    <h1 style="color: #fff" class="animated boomerang">String、StringBuffer、StringBuilder使用</h1>
+                                </div> 
+                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> 15日12月2019年</div>
+                                <h5 id="string">String：</h5>
 
-<p>this.属性名来使用属性、this.方法名、this(实参)实现构造方法</p>
+<p>默认的字符串类，当内容变化时，不能修改内存中的数据，而将原来的地址抛弃，变化后的字符保存到新地址中
+           缺点是在频繁修改的时候，内存消耗大。
+           常用方法
+               charAt(int index) 返回 char指定索引处的值。 
+               length()：方法，获取字符串的长度，有一个面试题就是问数组与字符串的长度是方法还是属性？
+               concat(String str) 将指定的字符串连接到该字符串的末尾。相当于+拼接 
+               contains(CharSequence s) 当且仅当此字符串包含指定的char值序列时才返回true。 CharSequence是字符序列
+                可以传String类型的值，这是Java多态的一个体现
+               startWith(String suffix) endsWith(String suffix) 与JS一样
+               equals(Object anObject) 将此字符串与指定对象进行比较。先进行地址比较，地址不一样且anObject是字符串再比较内容
+               equalsIgnoreCase(String anotherString) 无视大小写
+               indexOf(String ch) <!--more-->
+               isEmpty() 返回 true如果，且仅当 length()为 0 。 
+               lastIndexOf(String ch) 
+               matches(String regex) 与正则表达式有关
+               replace(CharSequence target, CharSequence replacement)：替换指定的字符串内容，并返回新字符串对象
+               split(String regex)：按regex分隔字符串，返回String数组
+               substring(int beginIndex) 返回一个字符串，该字符串是此字符串的子字符串。<br />
+               substring(int beginIndex, int endIndex)<br />
+               toCharArray() 将此字符串转换为新的字符数组。
+               toLowerCase() ：转换小写
+               toUpperCase() ：转换为大写
+               toString() ：在String类不需要关心，但在其它类中一定记住。所有的Sysout打印语句都打印toString()方法的返回内容
+                   为什么很多对象打印的都是地址呢。原因是Object类中toString()定义的格式
+               trim() ：去除左右空格
+               valueOf()：将其它数据类型转换为String</p>
 
-<p>注意：this不能在static方法或static代码块中使用，this调用构造方法时，必须在第一行</p>
+<h5 id="stringbuilder">StringBuilder：</h5>
 
-<p>super：表示父类对象
-​ super.属性名来使用属性、super.方法名、super(实参)实现构造方法</p>
+<p>​           直接修改地址中的内容，内存消耗不大。不支持同步，线程不安全，效率比StringBuffer高一些
+​           常用构造方法
+​               StringBuilder()：创建默认容量为16的对象
+​               StringBuilder(String str) 构造一个初始化为指定字符串内容的字符串构建器。 
+​           常用方法
+​               append(内容)：拼接字符串
+​               delete(int start, int end) 删除此序列的子字符串中的字符。包含start, 不包含end
+​               deleteCharAt(int index) 删除 char在这个序列中的指定位置。 
+​               insert(内容)：将内容插入到字符串中
+​               replace(int start, int end, String str)：将包含start位置到end位置的内容替换为str
+​               reverse() 导致该字符序列被序列的相反代替。 
+​               setCharAt(int index, char ch) 指定索引处的字符设置为 ch 。 
+​               trimToSize() 尝试减少用于字符序列的存储。 将容量变为实际长度，可以减少内存</p>
 
-<p>注意：super调用构造方法时，必须在第一行</p>
+<h5 id="stringbuffer">StringBuffer</h5>
 
-            </p>      
-            <a href="/java/2019/12/26/arraysort.html" class="btn btn-primary">Read more</a>
-        </div>
-        <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="" style="width: 80%;">
-        </div> -->
-    </div>
-   
-</article>
+<p>​           直接修改地址中的内容，内存消耗不大，支持同步(synchronized)，线程安全
+​           与StringBuilder内容一样</p>
 
-<article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
-    <div class="row">
-        <div class="col-md-12" >
-           <h2 class="article-title" >Java数组</h2>
-            <br>
-            <p class="article-meta" style="width: 50%"><h5 id="数组">数组</h5>
+<h5 id="stringstringbuilderstringbuffer之间区别">String、StringBuilder、StringBuffer之间区别</h5>
 
-<h6 id="1定义">1、定义</h6>
-
-<p>​            在Java中的数组，保存同类型的数据。只有Object数据才不限制类型
-​            长度是固定的，不可改变。即在创建数组时，必须指定长度
-​            格式：数据类型[] 变量名 = new int[5];
-​            基本数据类型数组与引用数据类型数组的区别？
-​                要明白数组的默认值和数组的元素默认值，两者的默认值都是null，但两者的元素默认不同，元素默认由元素的类型决定
-​            在Java中，直接打印数组对象，得到数组当前的内在地址。如果想查看数组中的元素内容，必须使用循环逐个打印。</p>
-
-<h6 id="2初始化">2、初始化</h6>
-
-<p>​            数组的默认值为null
-​            初始化一般是指，数组的元素的初始化</p>
-
-<h6 id="3长度及索引">3、长度及索引</h6>
-
-<p>​            长度：使用数组名.length属性来获取
-​            数组的长度是固定
-​            索引：范围[0, length - 1]，如果超出范围，则抛出异常数组索引越界异常(java.lang.ArrayIndexOutOfBoundsException)</p>
-
-<h6 id="4遍历使用循环即可">4、遍历：使用循环即可</h6>
-
-            </p>      
-            <a href="/java/2019/12/25/array.html" class="btn btn-primary">Read more</a>
-        </div>
-        <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="/public/img/2525a477b4244bc98be0ba80bace87b5_th.gif" style="width: 80%;">
-        </div> -->
-    </div>
-   
-</article>
-
-<article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
-    <div class="row">
-        <div class="col-md-12" >
-           <h2 class="article-title" >Java运算符</h2>
-            <br>
-            <p class="article-meta" style="width: 50%"><ul>
-  <li>算数运算符：+、-、*、/、%、++、–</li>
-  <li>关系运算符：==、！=、&gt;、&lt;、&lt;=、&gt;=</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>位运算符：&amp;、</td>
-          <td>、~、«、»、»&gt;(按位右移补零)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>逻辑运算符：&amp;、</td>
-          <td>、~、&amp;&amp;(短路与，只要有false，则返回false。后面都不再执行)、</td>
-          <td> </td>
-          <td>。</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>三元运算符
-    <ul>
-      <li>
-        <p>条件表达式 ? 表达式1 : 表达式2</p>
-
-        <p>效果等同于if-else</p>
-
-        <p>支持嵌套，但不推荐</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>instanceof运算符</p>
-
-    <ul>
-      <li>判断对象是否是某个类的实例</li>
-    </ul>
-  </li>
-  <li>赋值运算符</li>
-</ul>
-
-            </p>      
-            <a href="/java/2019/12/24/yunsuanfu.html" class="btn btn-primary">Read more</a>
-        </div>
-        <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="/public/img/0187e45d2483d2a80121483796acw_1l_2o_100sh.jpg" style="width: 80%;">
-        </div> -->
-    </div>
-   
-</article>
-
-
-<nav>
-    <ul class="pagination">
-	
-            <li class="page-item">
-                <a class="page-link" href="/" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-    
-    
-            <li class="page-item">
-                <a class="page-link" href="/page3" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-    
-    </ul>
-</nav>
-
+<p>​           原理：都是基于数组来实现的，默认会创建一个带有一定长度的字符数组，当内容变化时，如果长度超过了预定的容量，则重新创建新的数组
+​</p>
+                     
                         </div>        
                     </div> 
                 </main>
+                <!-- 评论区 -->
+                    <div class="aui-body-box">
+                        <div id="messageContent"></div>
+                        <div class="aui-user-img">
+                            <img src="/public/img/mz.png" id="avtar" alt="">
+                            <span id="nickname">萌主</span>
+                        </div>
+                        <input type="text" id="text" value="" placeholder="">
+                        <input type="button" id="btn8" value="发送" placeholder="">
+                    </div>
 
-
+                    <a href="/java/2019/12/21/start.html" id="back" style="color: #fff">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Previous
+                    </a>
+                    <a href="/linux/2019/11/10/linux.html" id="back" style="float: right;color: #fff">
+                        Next&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 <!-- Footer -->
                 <div class="container-fluid footer-container">
                     <footer class="footer">
 
-                        <div class="footer-bottom">
+                        <div class="footer-bottom" style="color: #fff">
                                 
-                                <p class="text-center" style="font-size: 15px"><a href="#top">Back to top</a></p>
-                                <span></span>
+                                <p class="text-center" ><a href="#" >Back to top</a></p>
                         </div>
 
                     </footer>
@@ -343,25 +285,46 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
-        <script src="/public/js/wow.min.js"></script>
         <script src="/public/js/bootstrap.min.js"></script>
         <script src="/public/js/runtime.js"></script>
         <script src="/public/js/jquery.arctext.js"></script>
         <script>
-            function a(){
-                 setTimeout(function(){
 
-                    $('.text-wrapper').css({'display':''})
-                    // alert('jkjl');
+            var btn1 = document.getElementById('btn8');
+            var messageContent = document.getElementById('messageContent');
+            var text = document.getElementById('text');
+            var avtar = document.getElementById('avtar');
+            var nickname = document.getElementById('nickname');
 
-                },1000);
-                   
+            btn8.onclick = function() {
+
+                var mes = text.value;
+                var imgSrc = avtar.src;
+                var nick = nickname.innerHTML;
+
+                if (f == 1) {
+                    messageContent.innerHTML = messageContent.innerHTML + '<p> <img src = " ' + imgSrc + ' " alt = "" ><span> ' + nick + ' </span> <span>:' + mes + '</span> </p> ';
+                } else {
+                    messageContent.innerHTML = messageContent.innerHTML + '<p class="aui-right"><img src = " ' + imgSrc + ' " alt = "" > <span>: ' + nick + '</span><span>' + mes + '</span>  </p> ';
+                }
+                text.value = '';
             }
-            
-            $('#start').click(function(){
-                $('#app').css({'display':'none'})
-            })
-            flag = 1;
+
+            var f = 1;
+
+            nickname.onclick = avtar.onclick = function() {
+
+                if (f == 1) {
+                    nickname.innerHTML = '阿呆';
+                    avtar.src = '/public/img/20150813133233_nuNJk.jpeg';
+                    f = 0;
+                } else {
+                    nickname.innerHTML = '萌主';
+                    avtar.src = '/public/img/mz.png';
+                    f = 1;
+                }
+            }
+            var flag = 1;
             function change(){
                 if (flag==1) {
                     $('#head2').css({'display':'block'})
@@ -373,17 +336,11 @@
                      flag=1;
                 }
             }
-            $('#gif').hover(function(){
-                $('#box1').css({'display':'block'})
-            },function(){
-                $('#box1').css({'display':'none'})
-            })
             $(function(){
                 $("#w2").show().arctext({
                     radius:140
                 })
             })
-            new WOW().init();
         </script>
     </body>
 </html>

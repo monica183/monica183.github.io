@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<head>
+    <head>
         <title>Home</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,41 +8,56 @@
 
         <!-- Main CSS --> 
         <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="/public/css/mimic.min.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/mimic.css">
         <link rel="stylesheet" href="/public/css/style.css">
         <link rel="stylesheet" type="text/css" href="/public/css/index.css">
          <link rel="stylesheet" type="text/css" href="/public/css/load.css">
+         <link rel="stylesheet" type="text/css" href="/public/css/comment.css">
         <!-- Font Awesome -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.css">
-        <link rel="stylesheet" type="text/css" href="/public/css/animate.css">
-        <style>
-            #content-wrapper{
-               /*background:url(/public/img/20180313200247_isovl.jpg);*/
-               background-color:rgb(178,174,162);
-            }
-
-        </style>
+       
     </head>
-  
-    <body>
-        <!-- <div id="app" style="position: absolute;z-index: 88888" >
-            <div class="text-wrapper">
-                <div class="text part1">
-                    <div style="padding-bottom: 100%;">
-                        <span class="letter"><div class="character">W</div> <span></span></span>
-                        <span class="letter"><div class="character">e</div> <span></span></span>
-                        <span class="letter"><div class="character">l</div> <span></span></span>
-                        <span class="letter"><div class="character">c</div> <span></span></span>
-                        <span class="letter"><div class="character">o</div> <span></span></span>
-                        <span class="letter"><div class="character">m</div> <span></span></span>
-                        <span class="letter"><div class="character">e</div> <span></span></span>
-                    </div>
-                </div>
-            </div>
-            <a href="#cl" id="start" style="margin-bottom: 400px;">Start</a>
-        </div> -->
-
+    <style>
+    body{
+        /*background-image: url(/public/img/01ffde5d68d9fca80120526dc5813c.j_1l_2o_100sh.jpg);*/
+        /*position: fixed;*/
+    }
+    #header1 img{
+        width: 100%;
+        height: 400px;
+    }
+        .MenuDropdown span{
+             font-size: 16px;
+             color: #000;
+             font-weight: bold;
+        }
+        .col{
+             padding: 50px;
+             margin-top: 70px;
+             width: 60%;
+             background-color: #74787a;
+        }
+        #title{
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #date{
+            /*display: block;;*/
+            width: 100%;
+            height: 20px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        body{
+               background:url(/public/img/01be365e06c929a80120a8957117_100sh.jpg);
+            }
+    </style>
+    <body style="color: #fff">
+         <!-- Main navigation -->
         <div id="sidebar">
                       
             <div class="navbar-expand-md navbar-dark"> 
@@ -84,7 +99,7 @@
                         <div id="mainNavbar">
                             <ul class="flex-column mr-auto">
                                 <li class="nav-item">
-                                       <a class="nav-link" href="index.html">
+                                       <a class="nav-link" href="/index.html">
                                         <span class="glyphicon glyphicon-home"></span>
                                         &nbsp;&nbsp;首页<span class="sr-only">(current)</span>
                                        </a>
@@ -159,49 +174,24 @@
                 </div>
             </div> 
         </div>
-    
         
-        <div id="content" >
-
+        <div id="header1">
+            <!-- <img src="/public/img/01968d5d2843aba801214837dcf9c280w_1l_2o_100sh.jpg"> -->
+        </div>
+        
+        <div id="content">
             <div id="content-wrapper" >
+                <!-- Main content area -->
                 <main class="container-fluid">
                     <div class="row">
-
+                       
                         <!-- Main content -->
-                        <div class="col">
-                                
-<article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
-    <div class="row">
-        <div class="col-md-12" >
-           <h2 class="article-title" >Java关键字</h2>
-            <br>
-            <p class="article-meta" style="width: 50%"><h5 id="this表示当前执行的对象">this：表示当前执行的对象</h5>
-
-<p>this.属性名来使用属性、this.方法名、this(实参)实现构造方法</p>
-
-<p>注意：this不能在static方法或static代码块中使用，this调用构造方法时，必须在第一行</p>
-
-<p>super：表示父类对象
-​ super.属性名来使用属性、super.方法名、super(实参)实现构造方法</p>
-
-<p>注意：super调用构造方法时，必须在第一行</p>
-
-            </p>      
-            <a href="/java/2019/12/26/arraysort.html" class="btn btn-primary">Read more</a>
-        </div>
-        <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="" style="width: 80%;">
-        </div> -->
-    </div>
-   
-</article>
-
-<article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
-    <div class="row">
-        <div class="col-md-12" >
-           <h2 class="article-title" >Java数组</h2>
-            <br>
-            <p class="article-meta" style="width: 50%"><h5 id="数组">数组</h5>
+                        <div class="col" style="line-height: 30px;letter-spacing: 2px;margin-top: 100px;">
+                                <div id="title">
+                                    <h1 style="color: #fff" class="animated boomerang">Java数组</h1>
+                                </div> 
+                                <div id="date"><span  class="glyphicon glyphicon-pencil"></span> 25日12月2019年</div>
+                                <h5 id="数组">数组</h5>
 
 <h6 id="1定义">1、定义</h6>
 
@@ -224,113 +214,34 @@
 ​            索引：范围[0, length - 1]，如果超出范围，则抛出异常数组索引越界异常(java.lang.ArrayIndexOutOfBoundsException)</p>
 
 <h6 id="4遍历使用循环即可">4、遍历：使用循环即可</h6>
-
-            </p>      
-            <a href="/java/2019/12/25/array.html" class="btn btn-primary">Read more</a>
-        </div>
-        <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="/public/img/2525a477b4244bc98be0ba80bace87b5_th.gif" style="width: 80%;">
-        </div> -->
-    </div>
-   
-</article>
-
-<article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
-    <div class="row">
-        <div class="col-md-12" >
-           <h2 class="article-title" >Java运算符</h2>
-            <br>
-            <p class="article-meta" style="width: 50%"><ul>
-  <li>算数运算符：+、-、*、/、%、++、–</li>
-  <li>关系运算符：==、！=、&gt;、&lt;、&lt;=、&gt;=</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>位运算符：&amp;、</td>
-          <td>、~、«、»、»&gt;(按位右移补零)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>逻辑运算符：&amp;、</td>
-          <td>、~、&amp;&amp;(短路与，只要有false，则返回false。后面都不再执行)、</td>
-          <td> </td>
-          <td>。</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>三元运算符
-    <ul>
-      <li>
-        <p>条件表达式 ? 表达式1 : 表达式2</p>
-
-        <p>效果等同于if-else</p>
-
-        <p>支持嵌套，但不推荐</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>instanceof运算符</p>
-
-    <ul>
-      <li>判断对象是否是某个类的实例</li>
-    </ul>
-  </li>
-  <li>赋值运算符</li>
-</ul>
-
-            </p>      
-            <a href="/java/2019/12/24/yunsuanfu.html" class="btn btn-primary">Read more</a>
-        </div>
-        <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="/public/img/0187e45d2483d2a80121483796acw_1l_2o_100sh.jpg" style="width: 80%;">
-        </div> -->
-    </div>
-   
-</article>
-
-
-<nav>
-    <ul class="pagination">
-	
-            <li class="page-item">
-                <a class="page-link" href="/" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-    
-    
-            <li class="page-item">
-                <a class="page-link" href="/page3" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-    
-    </ul>
-</nav>
-
+                     
                         </div>        
                     </div> 
                 </main>
+                <!-- 评论区 -->
+                    <div class="aui-body-box">
+                        <div id="messageContent"></div>
+                        <div class="aui-user-img">
+                            <img src="/public/img/mz.png" id="avtar" alt="">
+                            <span id="nickname">萌主</span>
+                        </div>
+                        <input type="text" id="text" value="" placeholder="">
+                        <input type="button" id="btn8" value="发送" placeholder="">
+                    </div>
 
-
+                    <a href="/java/2019/12/26/arraysort.html" id="back" style="color: #fff">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Previous
+                    </a>
+                    <a href="/java/2019/12/24/yunsuanfu.html" id="back" style="float: right;color: #fff">
+                        Next&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 <!-- Footer -->
                 <div class="container-fluid footer-container">
                     <footer class="footer">
 
-                        <div class="footer-bottom">
+                        <div class="footer-bottom" style="color: #fff">
                                 
-                                <p class="text-center" style="font-size: 15px"><a href="#top">Back to top</a></p>
-                                <span></span>
+                                <p class="text-center" ><a href="#" >Back to top</a></p>
                         </div>
 
                     </footer>
@@ -343,25 +254,46 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
-        <script src="/public/js/wow.min.js"></script>
         <script src="/public/js/bootstrap.min.js"></script>
         <script src="/public/js/runtime.js"></script>
         <script src="/public/js/jquery.arctext.js"></script>
         <script>
-            function a(){
-                 setTimeout(function(){
 
-                    $('.text-wrapper').css({'display':''})
-                    // alert('jkjl');
+            var btn1 = document.getElementById('btn8');
+            var messageContent = document.getElementById('messageContent');
+            var text = document.getElementById('text');
+            var avtar = document.getElementById('avtar');
+            var nickname = document.getElementById('nickname');
 
-                },1000);
-                   
+            btn8.onclick = function() {
+
+                var mes = text.value;
+                var imgSrc = avtar.src;
+                var nick = nickname.innerHTML;
+
+                if (f == 1) {
+                    messageContent.innerHTML = messageContent.innerHTML + '<p> <img src = " ' + imgSrc + ' " alt = "" ><span> ' + nick + ' </span> <span>:' + mes + '</span> </p> ';
+                } else {
+                    messageContent.innerHTML = messageContent.innerHTML + '<p class="aui-right"><img src = " ' + imgSrc + ' " alt = "" > <span>: ' + nick + '</span><span>' + mes + '</span>  </p> ';
+                }
+                text.value = '';
             }
-            
-            $('#start').click(function(){
-                $('#app').css({'display':'none'})
-            })
-            flag = 1;
+
+            var f = 1;
+
+            nickname.onclick = avtar.onclick = function() {
+
+                if (f == 1) {
+                    nickname.innerHTML = '阿呆';
+                    avtar.src = '/public/img/20150813133233_nuNJk.jpeg';
+                    f = 0;
+                } else {
+                    nickname.innerHTML = '萌主';
+                    avtar.src = '/public/img/mz.png';
+                    f = 1;
+                }
+            }
+            var flag = 1;
             function change(){
                 if (flag==1) {
                     $('#head2').css({'display':'block'})
@@ -373,17 +305,11 @@
                      flag=1;
                 }
             }
-            $('#gif').hover(function(){
-                $('#box1').css({'display':'block'})
-            },function(){
-                $('#box1').css({'display':'none'})
-            })
             $(function(){
                 $("#w2").show().arctext({
                     radius:140
                 })
             })
-            new WOW().init();
         </script>
     </body>
 </html>

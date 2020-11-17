@@ -1,0 +1,233 @@
+I"�1<p>cd (change directory)切换目录
+cd           #root根目录
+cd   /       #系统根目录 
+cd  ../../   #返回上上一层目录 
+ls/dir （list）列出目录下文件 
+ls  -a      （–all）                #列出所有文件
+ls  -d      （–directory）      #列出目录
+ls  -i      （–inode）            #显示每个文件的inode 号（索引节点号，可以理解为文件的存储地址） 
+ls  -l      （-long）               #较长格式列出
+ls  -lh     （–human-readable）与-l #人性化阅读输出
+clear清屏
+clear 清屏 
+<!--more-->
+dirs 显示目录记录、
+dirs    +n       #显示从左边算起第n笔的目录。
+dirs    -n        #退一级目录的路径
+dirs    -l         #显示目录完整的记录。</p>
+
+<p>mv （move）移动或更名现有的文件或目录 
+mv  -b       (–backup）+ 目标文件或路径 　      #移动到目标目录，若覆盖文件，则先备份
+mv  -f      （–force ）+ 目标文件或路径             #强制覆盖，没有目标文件时相当于备份
+mv  -i      （–interactive）+ 目标文件或路径  　#覆盖前先行询问用户
+mv  -u      （–update）+ 目标文件或路径 　     #在移动或更改文件名时，若目标文件已存在，且其文件日期比源文件新，则不覆盖目标文件。</p>
+
+<p>例子：</p>
+
+<p>mv test /root 将test文件转移到root路径下</p>
+
+<p>mv test /root/test1将test文件转移到root 路径下并重命名为test1</p>
+
+<p>pwd （print working directory）显示工作目录 
+pwd          #显示当前工作目录</p>
+
+<p>rm （remove）删除文件或目录
+rm  -d      （-directory）         #直接把欲删除的目录的硬连接数据删成0，删除该目录 
+rm  -f      （–force）              #强制删除文件或目录
+rm  -i      （interactive）        #删除既有文件或目录之前先询问用户 
+rm  -r或-R  （–recursive）    #递归删除，防止目录里面有文件不能删除</p>
+
+<p>例子：rm test1 删除test1文件</p>
+
+<p>rm test/a 删除test里面的a文件</p>
+
+<p>rm -f test1 强制删除test1，不会有进一步的提示</p>
+
+<p>rm -r test/ 删除名为test的文件夹</p>
+
+<p>rm -r test/a 删除test下的a文件夹</p>
+
+<p>rm -rf test/ 强制删除名为test的文件夹</p>
+
+<p>mkdir (make directories) 建立目录
+mkdir            +文件名                                          #创建目录
+mkdir   -m      （–mode）+a=权限+目录名         #设置目录权限（rwx）例：mkdir -m a=rw bbb   创建目录bbb，权限为rw（a是模式固定写法）
+mkdir   -p      （–parents）+父目录/子目录         #若所要建立目录的上层目录目前尚未建立，则会一并建立上层目录  例1：mkdir -p 111/abc    创建abc目录，111为子目录  例2：mkdir -p /ms/{sales,hr,web}   创建一个名为/ms的目录，其中有sales、hr、web的子目录 
+mkdir   -pv      +目录名                                         #批量创建目录  例：mkdir -pv /tmp/test/{a1,b1}/{c1,d1}
+mkdir   -v      （–verbose）                                  #创建目录,并显示详细信息</p>
+
+<p>例子：</p>
+
+<p>mkdir a 在当前目录创建名字为a的文件夹</p>
+
+<p>rmdir 删除空目录
+rmdir            +目录名             #删除目录，注意必须是空目录
+rmdir    -p      +目录/目录/目录      #删除指定目录及其上级文件夹  例：rmdir -p a/b/c</p>
+
+<p>echo 显示一行文本 （可使用通配符，正则表达式）
+echo            +文本内容                       #显示文本 <br />
+echo   -n       +文本内容                      #显示不带尾部回车符的文本
+echo   -e       +”文本内容”                    #允许使用转义字符输出文本  例：echo -e “a\nb\nc” 
+echo            +新文本内容 &gt; 文件名     #重定向，清除源文件所有内容，并插入单行   例：echo “hello word” &gt;jackonill.txt
+echo            +新文本内容 » 文件名   #追加重定向，在原有文件基础上末尾插入一行文本逐行</p>
+
+<p>ifconfig/ip addr（CentOS） 显示或设置网络设备 
+ifconfig              #处于激活状态的网络接口
+ifconfig     -a      #所有配置的网络接口，不论其是否激活</p>
+
+<p>ping 检测主机（127.0.0.1为主机，可以检验网卡，用于检测内网
+ping +ip/域名       #检测外网</p>
+
+<p>tar (tape archive)解压缩文件</p>
+
+<p>-c ：新建打包文件<br />
+-t ：查看打包文件的内容含有哪些文件名<br />
+-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中<br />
+-j ：通过bzip2的支持进行压缩/解压缩<br />
+-z ：通过gzip的支持进行压缩/解压缩<br />
+-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来<br />
+-f filename ：filename为要处理的文件<br />
+-C dir ：指定压缩/解压缩的目录dir
+压缩：tar -jcv -f filename.tar.bz2 要被处理的文件或目录名称<br />
+查询：tar -jtv -f filename.tar.bz2<br />
+解压：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录<br />
+tar  -czvf   +压缩文件名 源文件名    #将a1文件打包并且压缩  例：tar -czvf a1 g.gz <br />
+tar  zxvf    +目标文件                       #解压  例: tar zxvf ar_test.tar.gz         解压ar_test.tar.gz压缩包</p>
+
+<p>date 显示系统时间
+date                                               #打印时间
+date     -s      +时间                        #设置时间  例：date -s ‘14:35:40’ 
+date     +%m%d%H%M%S           #按照格式输出时间</p>
+
+<p>su 切换用户
+su              +用户名        #切换到用户
+sudo     +命令                 #在root用户下执行一条命令
+sudo su                          #下面的命令都用root用户执行
+su root                           #CentOS下切换root用户的一种方式</p>
+
+<p>cp （copy）拷贝文件
+cp  -p      +文件名 路径                          #将文件拷贝到指定路径，并且保留原文件的属性 例：cp -p test.rb /home/test  将test.rb拷贝到test目录
+cp  -r   +源目录名 目标目录名                #将某目录copy到目标目录下   例：cp -r Dir/ /home/test      将Dir目录copy到test目录下
+cp  -fr  +源目录下文件名 目标目录名      #将源目录下文件名文件强制copy到目标目录下   例：cp -fr Dir/* /home/test        将Dir下面的所有文件强制copy到test目录下
+cp   test.rb{,.bak}                                    #备份test.rb，并在尾部加上.bak后缀
+cp -u -v file1 file2                                    #复制文件，只有源文件较目的文件的修改时间新时，才复制文件
+cp file1 file2                                            #将文件file1复制成文件file2
+cp -i file1 file2                                         #采用交互方式将文件file1复制成文件file2
+cp -p a.txt tmp/                                       #复制时保留文件属性</p>
+
+<p>例子：</p>
+
+<p>cp test test1 复制一个test文件命名为test1
+cp -r test test1 复制test文件夹命名为test1</p>
+
+<p>chmod 改变文件/目录的权限 
+chmod ugo+r    文件         #所有人皆可读取
+chmod a+r      文件           #所有人皆可读取
+chmod ug+w,o-w 文件      #设为该档案拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入
+chmod u+x      文件          #创建者拥有执行权限 
+chmod a-x      文件           #收回所有用户的对文件的执行权限
+chmod 777      文件          #所有人可读，写，执行</p>
+
+<p>cat 查看文件内容
+cat          +目标文本          #普通输出 
+cat -n 目标文本                 #开头显示行号
+cat -E 目标文本                 #以$结束
+cat -ns 目标文本                #去空行，加行号</p>
+
+<p>tac       +目标文本              #反方向查看文件内容</p>
+
+<p>touch 创建文件
+touch            +文件名                 #将文件的创建时间改为当前时间，文件不存在则建之  例：touch test.php  将test.php的档案时间改为，当前时间，文件不存在建之
+touch   -c -t 时间 +文件名           #将档案时间改为特定时间  例：touch -c -t 05061803 test.php     将档案时间改为,5月6日18点3分
+touch   -r                                     #参考文件名 目标文件名  将目标文件档案改成跟参考文件一样 例： touch -r abc.php test.php   将test.php档案改成跟abc.php一样
+touch   d 时间 文件名                 #将文件日期改为特定天数时间  例：touch -d “2 days ago” test.php   将test.php日期修改为2天以前</p>
+
+<p>例子：
+touch test 在当前目录创建名为test的文件</p>
+
+<p>history 查看用户历史操作
+history          #查看所有执行过的命令
+history  n      #显示n条历史记录
+!n                  #执行编号历史是n的命令，注意感叹号       例：!4             执行编号是4的命令
+history -c      #清除历史记录</p>
+
+<p>id/who 查看用户
+id/who           #显示当前用户的信息
+id   某用户     #显示某用户的信息
+who -a           #显示目前登入系统的用户详细信息
+who -b           #上次系统启动时间</p>
+
+<p>man 查看帮助文档
+man     +命令    #查看某命令手册</p>
+
+<p>vi/vim（vi增强工具） 编辑文本
+vim 文本名              #编辑某文本
+set nu（number）  #vi/vim模式下显示行数
+进入文档后，点击 i 进入insert模式，在文档中输入文字，在当前光标处编辑，文档下面会有insert的标识
+进入文档后，点击 a 可以编辑光标下一位
+退出编辑状态后，输入Shift+g即可立刻跳转到本文档最后
+点击esc按钮可以退出编辑状态
+：输入冒号可以输入文档相关的指令
+wq 表示保存并退出
+q 表示退出
+q！ 强制退出，不保存修改的内容</p>
+
+<p>退出编辑状态，点击 x 键可以删除1个字符，一次有效
+退出编辑状态，点击 dd 可以删除一行字符
+退出编辑状态，点击 r + 要替换的内容，即可将当前内容替换</p>
+
+<p>sleep 休眠
+sleep n;命令      #n秒后，执行某命令,注意分号</p>
+
+<p>shutdown/poweroff/halt 关机/重启命令
+shutdown -h now或/poweroff或halt   #立刻关机
+shutdown -h 时间                              #在特定时间关机
+shutdown -H now                              #立刻停机
+shutdown –r now或reboot                 #重启</p>
+
+<p>diff 比较两个文件的差异
+diff    文件1 文件2                     #比较二个文件的不同 
+diff    文件夹1/ 文件夹2/            #比较二个文件夹的不同
+diff    -r  文件夹1/ 文件夹2/        #递归比较二个文件夹的不同</p>
+
+<p>apt-get/yum/dnf 下载软件包命令
+apt-get install  软件/包              #安装包
+apt-get update   软件/包           #更新软件
+apt-get remove   软件/包          #卸载软件
+apt-get upgrade                        #更新已安装的包
+apt-get clean                            #清理无用的包</p>
+
+<p>ssh
+ssh 用户@ip地址 #远程ssh连接某主机</p>
+
+<p>useradd 添加用户
+useradd     用户名               #添加某用户
+用户名       passwd              #为某用户添加密码
+useradd -r      用户名           #添加系统用户
+useradd -d 路径 用户名       #添加用户，并且指定，home目录</p>
+
+<p>df 报告文件系统磁盘空间的使用情况
+df          #列出各文件系统的磁盘空间使用情况
+df -a       #显示所有文件系统的磁盘使用情况
+df -ia      #列出各文件系统ionde使用情况
+df -h      （–human）#目前磁盘空间和使用情况 以更易读的方式显示</p>
+
+<p>lsof （list open files）是一个列出当前系统打开文件的工具
+lsof                       #列出所有正在使用文件
+lsof    文件名        #找出谁在使用某个文件
+lsof -c 程序           #查找某个程序打开的所有文件
+lsof -i                    #列出所有网络连接
+lsof -i   TCP          #列出所有TCP网络连接
+lsof -i：端口号      #找到使用某个端口的进程</p>
+
+<p>特殊装逼特效命令
+sl                              #跑火车
+cmatrix                     #代码雨  <br />
+cowsay +字符串       #小奶牛说你想说的话
+命令 | lolcat              #彩虹效果展示命令效果</p>
+
+<p>tail -f 滚动查看日志
+tail -f tet 滚动查看名字为tet的文档内容，不进入编辑界面
+tail -f 1000 tet 滚动查看最后1000行文档内容</p>
+
+:ET

@@ -1,0 +1,55 @@
+I"�<h5 id="string">String：</h5>
+
+<p>默认的字符串类，当内容变化时，不能修改内存中的数据，而将原来的地址抛弃，变化后的字符保存到新地址中
+           缺点是在频繁修改的时候，内存消耗大。
+           常用方法
+               charAt(int index) 返回 char指定索引处的值。 
+               length()：方法，获取字符串的长度，有一个面试题就是问数组与字符串的长度是方法还是属性？
+               concat(String str) 将指定的字符串连接到该字符串的末尾。相当于+拼接 
+               contains(CharSequence s) 当且仅当此字符串包含指定的char值序列时才返回true。 CharSequence是字符序列
+                可以传String类型的值，这是Java多态的一个体现
+               startWith(String suffix) endsWith(String suffix) 与JS一样
+               equals(Object anObject) 将此字符串与指定对象进行比较。先进行地址比较，地址不一样且anObject是字符串再比较内容
+               equalsIgnoreCase(String anotherString) 无视大小写
+               indexOf(String ch) <!--more-->
+               isEmpty() 返回 true如果，且仅当 length()为 0 。 
+               lastIndexOf(String ch) 
+               matches(String regex) 与正则表达式有关
+               replace(CharSequence target, CharSequence replacement)：替换指定的字符串内容，并返回新字符串对象
+               split(String regex)：按regex分隔字符串，返回String数组
+               substring(int beginIndex) 返回一个字符串，该字符串是此字符串的子字符串。<br />
+               substring(int beginIndex, int endIndex)<br />
+               toCharArray() 将此字符串转换为新的字符数组。
+               toLowerCase() ：转换小写
+               toUpperCase() ：转换为大写
+               toString() ：在String类不需要关心，但在其它类中一定记住。所有的Sysout打印语句都打印toString()方法的返回内容
+                   为什么很多对象打印的都是地址呢。原因是Object类中toString()定义的格式
+               trim() ：去除左右空格
+               valueOf()：将其它数据类型转换为String</p>
+
+<h5 id="stringbuilder">StringBuilder：</h5>
+
+<p>​           直接修改地址中的内容，内存消耗不大。不支持同步，线程不安全，效率比StringBuffer高一些
+​           常用构造方法
+​               StringBuilder()：创建默认容量为16的对象
+​               StringBuilder(String str) 构造一个初始化为指定字符串内容的字符串构建器。 
+​           常用方法
+​               append(内容)：拼接字符串
+​               delete(int start, int end) 删除此序列的子字符串中的字符。包含start, 不包含end
+​               deleteCharAt(int index) 删除 char在这个序列中的指定位置。 
+​               insert(内容)：将内容插入到字符串中
+​               replace(int start, int end, String str)：将包含start位置到end位置的内容替换为str
+​               reverse() 导致该字符序列被序列的相反代替。 
+​               setCharAt(int index, char ch) 指定索引处的字符设置为 ch 。 
+​               trimToSize() 尝试减少用于字符序列的存储。 将容量变为实际长度，可以减少内存</p>
+
+<h5 id="stringbuffer">StringBuffer</h5>
+
+<p>​           直接修改地址中的内容，内存消耗不大，支持同步(synchronized)，线程安全
+​           与StringBuilder内容一样</p>
+
+<h5 id="stringstringbuilderstringbuffer之间区别">String、StringBuilder、StringBuffer之间区别</h5>
+
+<p>​           原理：都是基于数组来实现的，默认会创建一个带有一定长度的字符数组，当内容变化时，如果长度超过了预定的容量，则重新创建新的数组
+​</p>
+:ET

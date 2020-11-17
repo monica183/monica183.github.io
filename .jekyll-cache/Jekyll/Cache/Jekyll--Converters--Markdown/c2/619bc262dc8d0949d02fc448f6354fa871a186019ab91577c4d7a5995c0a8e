@@ -1,0 +1,16 @@
+I"4<h2 id="docker常用命令">Docker常用命令</h2>
+
+<p>```
+#0.搜索收藏数不⼩于10的镜像
+docker search -s 10 名称
+#1.下载镜像
+docker pull 名称:tag
+#2.查看下载的镜像
+docker images;
+123456
+#3.查看正在运⾏的容器
+docker ps
+#4.查看所有容器
+docker ps -a
+#5.运⾏容器</p>
+:ET

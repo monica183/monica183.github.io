@@ -173,24 +173,45 @@
 <article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
     <div class="row">
         <div class="col-md-12" >
-           <h2 class="article-title" >Java关键字</h2>
+           <h2 class="article-title" >Java基本数据类型</h2>
             <br>
-            <p class="article-meta" style="width: 50%"><h5 id="this表示当前执行的对象">this：表示当前执行的对象</h5>
+            <p class="article-meta" style="width: 50%"><p>数据类型
+       基本数据类型：8个
+           整型：默认值为0，默认类型为int
+               byte：1个字节，8位，二进制：0000 0000，-128~127
+               short：2个字节，
+               int：4个字节
+               long：8个字节，1l或1L，建议使用大写
+           浮点型：默认值为0.0，默认类型为double
+               float：单精度，4个字节，1.0f或1.0F。F或f只有在编码的必写，打印不会有
+               double：双精度，8个字节, 1.0
+           字符型：只能使用单引号包裹，有且只有一个
+               char：’a’、’中’。非法字符’ab’，不是字符，而字符串
+               ASCII编码
+           布尔型：默认值为false
+               boolean：只有true和false，没有0或非0及其它的表现形式
+       引用数据类型：3种，无数个，默认值都为null
+           类：使用class定义
+           数组：[]定义
+           接口：使用interface定义
+   基本数据类型的顺序
+       从小到大：byte short char int long float double</p>
 
-<p>this.属性名来使用属性、this.方法名、this(实参)实现构造方法</p>
+<p>基本数据类型之间转换
+       就是指byte short char int long float double这7个类型之间可以相互转换
+       自动转换：容量小的自动转换为容量大</p>
 
-<p>注意：this不能在static方法或static代码块中使用，this调用构造方法时，必须在第一行</p>
-
-<p>super：表示父类对象
-​ super.属性名来使用属性、super.方法名、super(实参)实现构造方法</p>
-
-<p>注意：super调用构造方法时，必须在第一行</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   强制转换：容量大只能强制转换为容量小
+       格式：数据类型 变量名 = (数据类型)值;    基本数据类型之间运算
+   1、byte short char：这三个运算结果都int类型
+   2、运算结果以最大的类型返回
+</code></pre></div></div>
 
             </p>      
-            <a href="/java/2019/12/26/arraysort.html" class="btn btn-primary">Read more</a>
+            <a href="/java/2019/12/22/datatype.html" class="btn btn-primary">Read more</a>
         </div>
         <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="" style="width: 80%;">
+             <img src="/public/img/01fc425d31651aa80120695ca9d2_1l_2o_100sh.jpg" style="width: 80%;">
         </div> -->
     </div>
    
@@ -199,37 +220,61 @@
 <article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
     <div class="row">
         <div class="col-md-12" >
-           <h2 class="article-title" >Java数组</h2>
+           <h2 class="article-title" >Java入门</h2>
             <br>
-            <p class="article-meta" style="width: 50%"><h5 id="数组">数组</h5>
+            <p class="article-meta" style="width: 50%"><h5 id="java程序都由类组成的">Java程序都由类组成的</h5>
 
-<h6 id="1定义">1、定义</h6>
+<h6 id="类">类</h6>
 
-<p>​            在Java中的数组，保存同类型的数据。只有Object数据才不限制类型
-​            长度是固定的，不可改变。即在创建数组时，必须指定长度
-​            格式：数据类型[] 变量名 = new int[5];
-​            基本数据类型数组与引用数据类型数组的区别？
-​                要明白数组的默认值和数组的元素默认值，两者的默认值都是null，但两者的元素默认不同，元素默认由元素的类型决定
-​            在Java中，直接打印数组对象，得到数组当前的内在地址。如果想查看数组中的元素内容，必须使用循环逐个打印。</p>
+<p>​       是什么？用来描述一类事物。比如描述一下电脑，或者人，或者游戏
+​       可以包含什么？属性、方法(函数)、构造方法、内部类、代码块
+​           属性：该事物拥有的特点
+​           方法：描述的该事物拥有的行为
+​       格式：权限修饰符 类关键字(class) 类名 {
+​           权限修饰符 [final] [static] 数据类型 属性名 [= 初始值];
+​           权限修饰符 [final] [static] 返回值类型 方法名(形参列表) {
+​               方法体
+​           }
+​       }</p>
 
-<h6 id="2初始化">2、初始化</h6>
+<h6 id="类名">类名：</h6>
 
-<p>​            数组的默认值为null
-​            初始化一般是指，数组的元素的初始化</p>
+<p>​           命名规则
+​               1、区分大小写。
+​               2、不能以数字开头、不能使用关键字或保留字
+​               3、允许使用的范围数字、a~z、A~Z、&amp;及_，不支持-
+​           命名规范
+​               1、采用驼峰式命名
+​               2、类名首字线必须大写, XxxYyyZzz
+​               3、属性或变量名、方法名，首字母小写,xxxYyyZzz
+​               4、常量名全部大写且多个之间使用_分隔XXX_YYY_ZZZ</p>
 
-<h6 id="3长度及索引">3、长度及索引</h6>
+<h6 id="权限修饰符4个从小到大">权限修饰符:4个，从小到大</h6>
 
-<p>​            长度：使用数组名.length属性来获取
-​            数组的长度是固定
-​            索引：范围[0, length - 1]，如果超出范围，则抛出异常数组索引越界异常(java.lang.ArrayIndexOutOfBoundsException)</p>
+<p>​           private：私有的
+​           默认：即不写
+​           protected：被保护的
+​           public
+​       被public修饰的类
+​           1、类名和文件名必须一致</p>
 
-<h6 id="4遍历使用循环即可">4、遍历：使用循环即可</h6>
+<h6 id="类的编译">类的编译</h6>
+
+<p>​       注意文件路径
+​       格式：javac 文件名.java
+​       编译之后会在当前目录下产生一个类名.class的二进制文件。该文件就是Java能实现
+​       跨平台的关键点</p>
+
+<h6 id="类的运行">类的运行</h6>
+
+<p>​       注意文件路径，必须有main方法，格式是固定的
+​       格式：java 类名</p>
 
             </p>      
-            <a href="/java/2019/12/25/array.html" class="btn btn-primary">Read more</a>
+            <a href="/java/2019/12/21/start.html" class="btn btn-primary">Read more</a>
         </div>
         <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="/public/img/2525a477b4244bc98be0ba80bace87b5_th.gif" style="width: 80%;">
+             <img src="/public/img/01a5095cb93f64a801214168b557881l_2o_100sh.jpg" style="width: 80%;">
         </div> -->
     </div>
    
@@ -238,59 +283,28 @@
 <article class="wow bounceInRight" data-wow-duration=".5s" data-wow-delay="1s" >
     <div class="row">
         <div class="col-md-12" >
-           <h2 class="article-title" >Java运算符</h2>
+           <h2 class="article-title" >String、StringBuffer、StringBuilder使用</h2>
             <br>
-            <p class="article-meta" style="width: 50%"><ul>
-  <li>算数运算符：+、-、*、/、%、++、–</li>
-  <li>关系运算符：==、！=、&gt;、&lt;、&lt;=、&gt;=</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>位运算符：&amp;、</td>
-          <td>、~、«、»、»&gt;(按位右移补零)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>逻辑运算符：&amp;、</td>
-          <td>、~、&amp;&amp;(短路与，只要有false，则返回false。后面都不再执行)、</td>
-          <td> </td>
-          <td>。</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>三元运算符
-    <ul>
-      <li>
-        <p>条件表达式 ? 表达式1 : 表达式2</p>
+            <p class="article-meta" style="width: 50%"><h5 id="string">String：</h5>
 
-        <p>效果等同于if-else</p>
-
-        <p>支持嵌套，但不推荐</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>instanceof运算符</p>
-
-    <ul>
-      <li>判断对象是否是某个类的实例</li>
-    </ul>
-  </li>
-  <li>赋值运算符</li>
-</ul>
+<p>默认的字符串类，当内容变化时，不能修改内存中的数据，而将原来的地址抛弃，变化后的字符保存到新地址中
+           缺点是在频繁修改的时候，内存消耗大。
+           常用方法
+               charAt(int index) 返回 char指定索引处的值。 
+               length()：方法，获取字符串的长度，有一个面试题就是问数组与字符串的长度是方法还是属性？
+               concat(String str) 将指定的字符串连接到该字符串的末尾。相当于+拼接 
+               contains(CharSequence s) 当且仅当此字符串包含指定的char值序列时才返回true。 CharSequence是字符序列
+                可以传String类型的值，这是Java多态的一个体现
+               startWith(String suffix) endsWith(String suffix) 与JS一样
+               equals(Object anObject) 将此字符串与指定对象进行比较。先进行地址比较，地址不一样且anObject是字符串再比较内容
+               equalsIgnoreCase(String anotherString) 无视大小写
+               indexOf(String ch)</p>
 
             </p>      
-            <a href="/java/2019/12/24/yunsuanfu.html" class="btn btn-primary">Read more</a>
+            <a href="/java/2019/12/15/string.html" class="btn btn-primary">Read more</a>
         </div>
         <!-- <div class="col-md-6" style="margin-top: 80px;" id="pic">
-             <img src="/public/img/0187e45d2483d2a80121483796acw_1l_2o_100sh.jpg" style="width: 80%;">
+             <img src="/public/img/u=9932200138951&fm=26&gp=0.jpg" style="width: 80%;">
         </div> -->
     </div>
    
@@ -301,7 +315,7 @@
     <ul class="pagination">
 	
             <li class="page-item">
-                <a class="page-link" href="/" aria-label="Previous">
+                <a class="page-link" href="/page2" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                     <span class="sr-only">Previous</span>
                 </a>
@@ -309,7 +323,7 @@
     
     
             <li class="page-item">
-                <a class="page-link" href="/page3" aria-label="Next">
+                <a class="page-link" href="/page4" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                     <span class="sr-only">Next</span>
                 </a>

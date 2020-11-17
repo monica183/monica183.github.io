@@ -1,0 +1,44 @@
+I"�<ul>
+  <li>算数运算符：+、-、*、/、%、++、–</li>
+  <li>关系运算符：==、！=、&gt;、&lt;、&lt;=、&gt;=</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>位运算符：&amp;、</td>
+          <td>、~、«、»、»&gt;(按位右移补零)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>逻辑运算符：&amp;、</td>
+          <td>、~、&amp;&amp;(短路与，只要有false，则返回false。后面都不再执行)、</td>
+          <td> </td>
+          <td>。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>三元运算符
+    <ul>
+      <li>
+        <p>条件表达式 ? 表达式1 : 表达式2</p>
+
+        <p>效果等同于if-else</p>
+
+        <p>支持嵌套，但不推荐</p>
+      </li>
+    </ul>
+  </li>
+  <li>instanceof运算符
+    <ul>
+      <li>判断对象是否是某个类的实例</li>
+    </ul>
+  </li>
+  <li>赋值运算符</li>
+</ul>
+:ET
